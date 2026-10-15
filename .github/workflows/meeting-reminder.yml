@@ -1,0 +1,22 @@
+name: Membership Meeting reminder
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type SEND to send now (Javier approval)'
+        required: true
+  schedule:
+    - cron: '0 16 * * *'
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i web-push@3.6.7
+      - run: node push/send.js
+        env:
+          EVENT: ${{ github.event_name }}
+          CONFIRM: ${{ github.event.inputs.confirm }}
+          VAPID_PUBLIC: BHWLSFHXLq4c1BU93tDYGwrsE5HBycV-q2Q9xfa0Y3X1B16whPmoOTH33eRCwe1ZDccwmJiC9ZSnCmq60_LO-Xs
+          VAPID_PRIVATE: ${{ secrets.VAPID_PRIVATE }}
+          SUBSCRIPTIONS: ${{ secrets.SUBSCRIPTIONS }}
