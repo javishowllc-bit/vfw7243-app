@@ -19,3 +19,7 @@ dialog{border:0;border-radius:14px;max-width:360px}.past{display:flex;gap:10px;a
 header{position:relative}.donate{position:absolute;right:10px;top:12px;background:var(--r);color:#fff;border:2px solid #fff;border-radius:22px;padding:10px 16px;font-size:17px;font-weight:800}
 .donatebig{background:var(--r)}.urgentopt{color:#c00;font-weight:800;font-size:18px}select.urgent{color:#c00;font-weight:800;font-size:20px;border:2px solid #c00}
 .urgentnote{color:#c00;font-weight:900;font-size:22px;margin:6px 0}.remind{background:#fff3cd;border:2px solid var(--r);border-radius:10px;padding:12px;font-weight:700;margin-bottom:10px}.card.test{border:3px dashed var(--r)}
+
+.g .r{background:#e7e9ef;color:var(--n);font-weight:700;outline:2px solid var(--n)}.g .e.r{background:var(--r);color:#fff}.g small{display:block;font-size:9px;line-height:1}
+.rent{background:#fff;border-left:6px solid var(--n);border-radius:8px;padding:10px;margin:8px 0}.legend{margin:4px}.lg{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:middle}.lg.e{background:var(--r)}.lg.r{background:#e7e9ef;outline:2px solid var(--n)}
+.pot{background:#fff7ec;border:2px solid #e6781e;border-radius:10px;padding:10px;margin-top:10px}.pot h4{margin:6px 0;color:var(--n)}.who{padding-left:18px;margin:4px 0}

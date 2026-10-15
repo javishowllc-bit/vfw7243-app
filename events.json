@@ -20,16 +20,23 @@
    "start": "2026-11-06T08:00",
    "location": "City Hall",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20City%20Hall",
-   "description": "Test event. Details coming soon."
+   "description": "TEST event. Veterans Day ceremony. Please arrive by 7:45 AM.",
+   "flyer": "img/flyers/test_cityhall.png",
+   "price": "Free",
+   "doors": "07:45"
   },
   {
    "test": true,
    "id": "test-ball",
    "title": "TEST EVENT: Veterans Ball",
    "category": "Post Event",
-   "start": "2026-11-10",
+   "start": "2026-11-10T18:00",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Veterans%20Ball",
-   "description": "Test event. Time and tickets: details coming soon."
+   "description": "TEST event. Dinner, music and dancing. Formal or dress uniform.",
+   "doors": "17:30",
+   "price": "$45 per person (TEST)",
+   "location": "VFW Post 7243, 12064 Centralia Rd",
+   "flyer": "img/flyers/test_ball.png"
   },
   {
    "test": true,
@@ -39,16 +46,36 @@
    "start": "2026-11-11T11:00",
    "location": "Long Beach",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=Honor%20Guard",
-   "description": "Test event. Date shown is a placeholder. Details coming soon."
+   "description": "TEST event. Post Honor Guard presenting the colors.",
+   "flyer": "img/flyers/test_honorguard.png",
+   "price": "Free"
   },
   {
    "test": true,
    "id": "test-norwalk",
    "title": "TEST EVENT: City of Norwalk Parade",
    "category": "Parade",
-   "start": null,
+   "start": "2026-11-07T10:00",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=Norwalk%20Parade",
-   "description": "Test event. Post riding in the floats. Details coming soon."
+   "description": "TEST event. Post riding in the floats. Come cheer us on.",
+   "location": "Norwalk",
+   "price": "Free",
+   "flyer": "img/flyers/test_norwalk.png"
+  },
+  {
+   "test": true,
+   "id": "test-halloween",
+   "title": "TEST EVENT: Halloween Party Potluck",
+   "category": "Post Event",
+   "start": "2026-10-31T18:00",
+   "end": "22:00",
+   "doors": "17:45",
+   "price": "Free, bring a dish",
+   "location": "VFW Post 7243, 12064 Centralia Rd",
+   "flyer": "img/flyers/test_halloween.png",
+   "potluck": true,
+   "rsvp": "#potluck",
+   "description": "TEST event. Costumes welcome. Sign up below and tell us what you will bring."
   }
  ],
  "past": [
@@ -83,6 +110,51 @@
    "eventId": "test-membership",
    "remindDaysBefore": 14,
    "text": "Reminder: Membership Meeting Wed, Oct 7 at 11 AM at the Post (TEST EVENT)."
+  }
+ ],
+ "potluckSample": [
+  {
+   "name": "Maria G. (TEST)",
+   "cat": "Main dish",
+   "item": "Tamales"
+  },
+  {
+   "name": "Joe R. (TEST)",
+   "cat": "Dessert",
+   "item": "Pumpkin pie"
+  },
+  {
+   "name": "Linda P. (TEST)",
+   "cat": "Drinks",
+   "item": "Apple cider"
+  },
+  {
+   "name": "Tom S. (TEST)",
+   "cat": "Plates/Utensils",
+   "item": "Plates and forks for 30"
+  }
+ ],
+ "rentals": [
+  {
+   "test": true,
+   "date": "2026-10-17",
+   "type": "Private Party",
+   "start": "13:00",
+   "end": "18:00"
+  },
+  {
+   "test": true,
+   "date": "2026-10-24",
+   "type": "Celebration of Life",
+   "start": "13:00",
+   "end": "18:00"
+  },
+  {
+   "test": true,
+   "date": "2026-10-31",
+   "type": "Baby Shower",
+   "start": "10:00",
+   "end": "14:00"
   }
  ]
 }
