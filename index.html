@@ -4,9 +4,10 @@
 <link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="img/icon-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="VFW 7243">
 <link rel="stylesheet" href="style.css"></head><body>
-<header><img src="img/emblem.png" alt="VFW emblem"><div class="num">7243</div><div class="sub">Hawaiian Gardens, CA</div></header>
+<header><img src="img/emblem.png" alt="VFW emblem"><div class="num">7243</div><div class="sub">Hawaiian Gardens, CA</div><button id="donateBtn" class="donate">Donate</button></header>
 <main>
 <section id="events" class="tab">
+ <div id="remind" class="remind" hidden></div>
  <div class="seg"><button data-v="list" class="on">List</button><button data-v="grid">Month</button></div>
  <p id="note" class="note"></p><div id="evlist"></div><div id="evgrid" hidden></div>
  <h2>Recent at the Post</h2><div id="past"></div>
@@ -31,6 +32,7 @@
  <a class="big" href="mailto:VFW7243@yahoo.com">Email VFW7243@yahoo.com</a>
  <a class="big" href="https://www.facebook.com/vfwpost.hawaiiangardens/" target="_blank" rel="noopener">Facebook</a>
  <a class="big" href="https://www.instagram.com/vfw7243hawaiiangardens" target="_blank" rel="noopener">Instagram</a>
+ <h2>Business Hours of Operation</h2><div class="soon">Hours coming soon.</div>
  <a class="big alt" href="install.html">Add this app to your phone</a>
  <button class="big alt" id="alerts">Event reminder settings</button>
 </section>
@@ -43,4 +45,10 @@
  <p class="small">By saving, you agree VFW Post 7243 may text you event reminders. Msg and data rates may apply. You can remove your number any time in Contact. Your number is saved only on this phone for now. Text alerts start once the Post turns them on.</p>
  <button value="save" class="big">Save</button><button value="skip" class="big alt">Skip</button>
 </form></dialog>
+<dialog id="donate"><h3>Donate to VFW Post 7243</h3>
+ <label>Choose a cause<select id="cause"><option>Buddy Poppies</option><option>Holiday Toy Drive</option><option>Veterans Ball</option><option value="Utilities" class="urgentopt">UTILITIES (SERIOUS HELP)</option></select></label>
+ <p class="urgentnote">Utilities: Serious help needed</p>
+ <button id="giveBtn" class="big donatebig">Give</button>
+ <p class="small">Online giving coming soon. Contact the Post to donate. The Give button opens your email app addressed to VFW7243@yahoo.com.</p>
+ <button id="closeDonate" class="big alt">Close</button></dialog>
 <script src="app.js"></script></body></html>

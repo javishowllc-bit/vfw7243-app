@@ -15,3 +15,7 @@ label{display:block;margin:8px 0;font-weight:600}input,select,textarea{display:b
 .mon{background:#fff;border-radius:12px;padding:8px;margin:12px 0}.mon h3{margin:4px;color:var(--n)}.g{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center;font-size:14px}
 .g div{padding:8px 0;border-radius:6px}.g .h{font-weight:700;color:#666}.g .e{background:var(--r);color:#fff;font-weight:700;cursor:pointer}
 dialog{border:0;border-radius:14px;max-width:360px}.past{display:flex;gap:10px;align-items:center;background:#fff;border-radius:10px;padding:8px;margin:8px 0}.past img{width:64px;height:64px;object-fit:cover;border-radius:6px}
+
+header{position:relative}.donate{position:absolute;right:10px;top:12px;background:var(--r);color:#fff;border:2px solid #fff;border-radius:22px;padding:10px 16px;font-size:17px;font-weight:800}
+.donatebig{background:var(--r)}.urgentopt{color:#c00;font-weight:800;font-size:18px}select.urgent{color:#c00;font-weight:800;font-size:20px;border:2px solid #c00}
+.urgentnote{color:#c00;font-weight:900;font-size:22px;margin:6px 0}.remind{background:#fff3cd;border:2px solid var(--r);border-radius:10px;padding:12px;font-weight:700;margin-bottom:10px}.card.test{border:3px dashed var(--r)}

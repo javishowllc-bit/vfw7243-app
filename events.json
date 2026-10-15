@@ -1,48 +1,54 @@
 {
  "updated": "2026-10-14",
- "note": "No real Oct/Nov 2026 events found in Post records yet. Sample entries are placeholders.",
+ "note": "TEST EVENTS ONLY: these are made-up entries to preview the app. Not real events.",
  "events": [
   {
-   "id": "s1",
-   "sample": true,
-   "title": "SAMPLE EVENT: Game Night",
-   "category": "Games",
-   "start": "2026-10-24T19:00",
-   "doors": "18:30",
-   "price": "TBD",
-   "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Game%20Night",
-   "info": "https://www.facebook.com/vfwpost.hawaiiangardens/",
-   "flyer": "img/s1.png",
-   "qr": "qr/s1.svg",
-   "description": "Placeholder to show the layout. Real date, time, and price will be posted after Javier approves."
+   "test": true,
+   "id": "test-membership",
+   "title": "TEST EVENT: Membership Meeting",
+   "category": "Post Meeting",
+   "start": "2026-10-07T11:00",
+   "location": "VFW Post 7243, 12064 Centralia Rd",
+   "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Membership%20Meeting",
+   "description": "Test event to preview the app. Details coming soon."
   },
   {
-   "id": "s2",
-   "sample": true,
-   "title": "SAMPLE EVENT: City Event",
+   "test": true,
+   "id": "test-cityhall",
+   "title": "TEST EVENT: Veterans Day Ceremony at City Hall",
    "category": "City Event",
-   "start": "2026-11-11T10:00",
-   "doors": "09:30",
-   "price": "TBD",
-   "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20City%20Event",
-   "info": "https://www.facebook.com/vfwpost.hawaiiangardens/",
-   "flyer": "img/s2.png",
-   "qr": "qr/s2.svg",
-   "description": "Placeholder to show the layout. Real date, time, and price will be posted after Javier approves."
+   "start": "2026-11-06T08:00",
+   "location": "City Hall",
+   "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20City%20Hall",
+   "description": "Test event. Details coming soon."
   },
   {
-   "id": "s3",
-   "sample": true,
-   "title": "SAMPLE EVENT: Comedy Show",
-   "category": "Comedy Show",
-   "start": "2026-11-21T20:00",
-   "doors": "19:00",
-   "price": "TBD",
-   "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Comedy%20Show",
-   "info": "https://www.facebook.com/vfwpost.hawaiiangardens/",
-   "flyer": "img/s3.png",
-   "qr": "qr/s3.svg",
-   "description": "Placeholder to show the layout. Real date, time, and price will be posted after Javier approves."
+   "test": true,
+   "id": "test-ball",
+   "title": "TEST EVENT: Veterans Ball",
+   "category": "Post Event",
+   "start": "2026-11-10",
+   "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Veterans%20Ball",
+   "description": "Test event. Time and tickets: details coming soon."
+  },
+  {
+   "test": true,
+   "id": "test-honorguard",
+   "title": "TEST EVENT: Honor Guard with LADWP",
+   "category": "Honor Guard",
+   "start": "2026-11-11T11:00",
+   "location": "Long Beach",
+   "rsvp": "mailto:VFW7243@yahoo.com?subject=Honor%20Guard",
+   "description": "Test event. Date shown is a placeholder. Details coming soon."
+  },
+  {
+   "test": true,
+   "id": "test-norwalk",
+   "title": "TEST EVENT: City of Norwalk Parade",
+   "category": "Parade",
+   "start": null,
+   "rsvp": "mailto:VFW7243@yahoo.com?subject=Norwalk%20Parade",
+   "description": "Test event. Post riding in the floats. Details coming soon."
   }
  ],
  "past": [
@@ -70,6 +76,13 @@
    "title": "Post 80th Charter Anniversary (chartered May 25, 1946)",
    "date": "2026-06-01",
    "flyer": null
+  }
+ ],
+ "reminders": [
+  {
+   "eventId": "test-membership",
+   "remindDaysBefore": 14,
+   "text": "Reminder: Membership Meeting Wed, Oct 7 at 11 AM at the Post (TEST EVENT)."
   }
  ]
 }
