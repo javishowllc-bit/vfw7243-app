@@ -1,0 +1,4 @@
+const C='vfw7243-v1';const A=["./","index.html","install.html","style.css","app.js","events.json","manifest.json","img/emblem.png","img/icon-180.png","img/icon-192.png","img/icon-512.png","img/past_flag_day.png","img/past_toy_giveaway.png","img/past_veterans_ball.png","img/s1.png","img/s2.png","img/s3.png","qr/s1.svg","qr/s2.svg","qr/s3.svg"];
+self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A)).then(()=>self.skipWaiting())));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!=C).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',e=>{if(e.request.method!='GET')return;e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(C).then(x=>x.put(e.request,c));return r}).catch(()=>caches.match(e.request)))});

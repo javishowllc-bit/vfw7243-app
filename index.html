@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VFW Post 7243</title><meta name="theme-color" content="#1B2A4A">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="img/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="VFW 7243">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><img src="img/emblem.png" alt="VFW emblem"><div class="num">7243</div><div class="sub">Hawaiian Gardens, CA</div></header>
+<main>
+<section id="events" class="tab">
+ <div class="seg"><button data-v="list" class="on">List</button><button data-v="grid">Month</button></div>
+ <p id="note" class="note"></p><div id="evlist"></div><div id="evgrid" hidden></div>
+ <h2>Recent at the Post</h2><div id="past"></div>
+</section>
+<section id="hall" class="tab" hidden>
+ <h2>Hall Rental Request</h2>
+ <form id="hallform">
+  <label>Name<input name="Name" required></label><label>Phone<input name="Phone" type="tel" required></label>
+  <label>Email<input name="Email" type="email"></label><label>Date<input name="Date" type="date" required></label>
+  <div class="row"><label>Start time<input name="Start" type="time" required></label><label>End time<input name="End" type="time" required></label></div>
+  <label>Guest count<input name="Guests" type="number" min="1"></label>
+  <label>Event type<select name="Type"><option>Birthday</option><option>Wedding / Reception</option><option>Memorial</option><option>Meeting</option><option>Other</option></select></label>
+  <label>Notes<textarea name="Notes" rows="3"></textarea></label>
+  <button class="big">Send Request by Email</button>
+ </form>
+ <p class="note">This opens your email app with the details addressed to VFW7243@yahoo.com. A request is not a booking until the Post confirms.</p>
+ <div class="soon">Contract signing (DocuSign) and online payment coming soon, pending Post approval.</div>
+</section>
+<section id="contact" class="tab" hidden>
+ <h2>Contact the Post</h2>
+ <a class="big" href="https://www.openstreetmap.org/search?query=12064%20Centralia%20Rd%2C%20Hawaiian%20Gardens%2C%20CA%2090716" target="_blank" rel="noopener">12064 Centralia Rd<br>Hawaiian Gardens, CA 90716<br><small>Open map</small></a>
+ <a class="big" href="mailto:VFW7243@yahoo.com">Email VFW7243@yahoo.com</a>
+ <a class="big" href="https://www.facebook.com/vfwpost.hawaiiangardens/" target="_blank" rel="noopener">Facebook</a>
+ <a class="big" href="https://www.instagram.com/vfw7243hawaiiangardens" target="_blank" rel="noopener">Instagram</a>
+ <a class="big alt" href="install.html">Add this app to your phone</a>
+ <button class="big alt" id="alerts">Event reminder settings</button>
+</section>
+</main>
+<nav><button data-t="events" class="on">Events</button><button data-t="hall">Hall Rental</button><button data-t="contact">Contact</button></nav>
+<dialog id="phone"><form method="dialog" id="pf">
+ <h3>Get event reminders?</h3>
+ <p>Enter your mobile number to get reminders like: "Don't forget to register for [event], [time/date]. Preorder for discounted reserved seating."</p>
+ <input id="ph" type="tel" placeholder="(555) 555-5555">
+ <p class="small">By saving, you agree VFW Post 7243 may text you event reminders. Msg and data rates may apply. You can remove your number any time in Contact. Your number is saved only on this phone for now. Text alerts start once the Post turns them on.</p>
+ <button value="save" class="big">Save</button><button value="skip" class="big alt">Skip</button>
+</form></dialog>
+<script src="app.js"></script></body></html>

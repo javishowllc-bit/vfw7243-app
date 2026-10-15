@@ -1,0 +1,17 @@
+:root{--n:#1B2A4A;--r:#9B1B30}*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#f3f4f7;color:#111;padding-bottom:84px}
+header{background:var(--n);color:#fff;text-align:center;padding:14px 0 10px;border-bottom:5px solid var(--r)}
+header img{width:72px;height:72px;object-fit:contain}.num{font-size:28px;font-weight:800;letter-spacing:3px}.sub{font-size:13px;opacity:.8}
+main{padding:12px;max-width:640px;margin:auto}h2{color:var(--n)}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--n);padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;padding:20px 4px;font-size:18px;font-weight:700;color:#fff;background:none;border:0}nav button.on{background:var(--r)}
+.card{background:#fff;border-radius:12px;margin:12px 0;overflow:hidden;box-shadow:0 1px 4px #0002}
+.card img.f{width:100%;display:block}.card .b{padding:12px}.tag{display:inline-block;background:var(--r);color:#fff;border-radius:6px;padding:2px 8px;font-size:13px}
+.qr{width:110px;float:right;margin-left:8px}.big{display:block;width:100%;text-align:center;padding:16px;margin:10px 0;font-size:18px;font-weight:700;border-radius:10px;border:0;background:var(--n);color:#fff;text-decoration:none}
+.big.alt{background:#fff;color:var(--n);border:2px solid var(--n)}.note,.small{font-size:13px;color:#555}
+.soon{background:#fff3cd;border:1px solid #e0c060;border-radius:8px;padding:12px;font-weight:600}
+label{display:block;margin:8px 0;font-weight:600}input,select,textarea{display:block;width:100%;padding:12px;font-size:16px;margin-top:4px;border:1px solid #bbb;border-radius:8px}
+.row{display:flex;gap:8px}.row label{flex:1}.seg{display:flex;gap:6px}.seg button{flex:1;padding:12px;font-size:16px;border:2px solid var(--n);background:#fff;color:var(--n);border-radius:8px}.seg button.on{background:var(--n);color:#fff}
+.mon{background:#fff;border-radius:12px;padding:8px;margin:12px 0}.mon h3{margin:4px;color:var(--n)}.g{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center;font-size:14px}
+.g div{padding:8px 0;border-radius:6px}.g .h{font-weight:700;color:#666}.g .e{background:var(--r);color:#fff;font-weight:700;cursor:pointer}
+dialog{border:0;border-radius:14px;max-width:360px}.past{display:flex;gap:10px;align-items:center;background:#fff;border-radius:10px;padding:8px;margin:8px 0}.past img{width:64px;height:64px;object-fit:cover;border-radius:6px}
