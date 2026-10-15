@@ -1,17 +1,7 @@
 {
  "updated": "2026-10-14",
- "note": "TEST EVENTS ONLY: these are made-up entries to preview the app. Not real events.",
+ "note": "Membership Meeting is real. All other events marked TEST are made-up entries to preview the app.",
  "events": [
-  {
-   "test": true,
-   "id": "test-membership",
-   "title": "TEST EVENT: Membership Meeting",
-   "category": "Post Meeting",
-   "start": "2026-10-07T11:00",
-   "location": "VFW Post 7243, 12064 Centralia Rd",
-   "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Membership%20Meeting",
-   "description": "Test event to preview the app. Details coming soon."
-  },
   {
    "test": true,
    "id": "test-cityhall",
@@ -76,6 +66,18 @@
    "potluck": true,
    "rsvp": "#potluck",
    "description": "TEST event. Costumes welcome. Sign up below and tell us what you will bring."
+  },
+  {
+   "id": "membership",
+   "recurring": "firstSaturday",
+   "time": "11:00",
+   "category": "Meeting",
+   "title": "Membership Meeting",
+   "location": "The Hall, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
+   "description": "Monthly Membership Meeting, the first Saturday of every month at 11 AM in the hall. All members please attend. Questions: VFW7243@yahoo.com",
+   "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Membership%20Meeting",
+   "zoomUrl": "",
+   "test": false
   }
  ],
  "past": [
@@ -107,9 +109,9 @@
  ],
  "reminders": [
   {
-   "eventId": "test-membership",
+   "eventId": "membership",
    "remindDaysBefore": 14,
-   "text": "Reminder: Membership Meeting Wed, Oct 7 at 11 AM at the Post (TEST EVENT)."
+   "text": "Reminder: Membership Meeting {date} at 11 AM in the hall, 12064 Centralia Rd, Hawaiian Gardens."
   }
  ],
  "potluckSample": [

@@ -7,16 +7,18 @@ const t12=t=>{if(!t)return'';let[h,m]=t.split(':');h=+h;return(h%12||12)+':'+m+(
 async function load(){let d;const loc=localStorage.getItem('draftEvents');
  try{d=await (await fetch('events.json')).json()}catch(e){d={events:[],past:[]}}
  $('#note').textContent=d.note||'';
+ const q=new URLSearchParams(location.search).get('today');const now=q?new Date(q+'T09:00'):new Date();
+ d.events=expand(d.events,now);
  const ev=d.events.sort((a,b)=>(a.start||'9').localeCompare(b.start||'9'));
  const when=e=>!e.start?'Date and time: details coming soon':e.start.length==10?new Date(e.start+'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})+', time: details coming soon':fmt(e.start)+(e.end?' to '+t12(e.end):'');
  $('#evlist').innerHTML=ev.map(e=>`<div class="card${e.test?' test':''}" id="ev-${esc(e.id)}">${e.flyer?`<img class="f" src="${esc(e.flyer)}" alt="Flyer">`:''}<div class="b">
  ${e.qr?`<img class="qr" src="${esc(e.qr)}" alt="QR code">`:''}<span class="tag">${esc(e.category)}</span><h3>${esc(e.title)}</h3>
  <div><b>When:</b> ${when(e)}</div>${e.location?`<div><b>Where:</b> ${esc(e.location)}</div>`:''}${e.doors?`<div><b>Doors:</b> ${t12(e.doors)}</div>`:''}${e.price?`<div><b>Price:</b> ${esc(e.price)}</div>`:''}<p class="small">${esc(e.description)}</p>
- ${e.potluck?potluckHTML(d):`<a class="big" href="${esc(e.rsvp)}">RSVP</a>`}</div></div>`).join('')||'<p>No events posted yet.</p>';
- const q=new URLSearchParams(location.search).get('today');const now=q?new Date(q+'T09:00'):new Date();(d.reminders||[]).forEach(r=>{const e=ev.find(x=>x.id==r.eventId);if(!e||!e.start)return;const t=new Date(e.start);if(now>=new Date(t-r.remindDaysBefore*864e5)&&now<t){$('#remind').hidden=false;$('#remind').textContent=r.text}});
- const months=[[2026,9],[2026,10]];
+ ${e.recurring?zoomHTML(e):''}${e.potluck?potluckHTML(d):`<a class="big" href="${esc(e.rsvp)}">RSVP</a>`}</div></div>`).join('')||'<p>No events posted yet.</p>';
+(d.reminders||[]).forEach(r=>{const e=ev.filter(x=>x.id==r.eventId||x.id.startsWith(r.eventId+'-')).find(x=>new Date(x.start)>now);if(!e||!e.start)return;const t=new Date(e.start);if(now>=new Date(t-r.remindDaysBefore*864e5)&&now<t){$('#remind').hidden=false;$('#remind').textContent=r.text.replace('{date}',new Date(e.start).toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'}))}});
+ const months=[0,1].map(i=>{const x=new Date(now.getFullYear(),now.getMonth()+i,1);return[x.getFullYear(),x.getMonth()]});
  $('#evgrid').innerHTML=months.map(([y,m])=>{const first=new Date(y,m,1).getDay(),n=new Date(y,m+1,0).getDate();let c='SMTWTFS'.split('').map(x=>`<div class="h">${x}</div>`).join('')+'<div></div>'.repeat(first);
-  for(let i=1;i<=n;i++){const k=`${y}-${String(m+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;const e=ev.find(x=>x.start&&x.start.startsWith(k));const rr=(d.rentals||[]).find(x=>x.date==k);const cls=(e?'e':'')+(rr?' r':'');const lab=rr?'<small>Rented</small>':'';c+=e?`<div class="${cls}" onclick="document.querySelector('.seg button').click();document.getElementById('ev-${e.id}').scrollIntoView()">${i}${lab}</div>`:`<div class="${cls}">${i}${lab}</div>`}
+  for(let i=1;i<=n;i++){const k=`${y}-${String(m+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;const e=ev.find(x=>x.start&&x.start.startsWith(k));const rr=(d.rentals||[]).find(x=>x.date==k);const cls=(e?'e':'')+(e&&!e.test?' real':'')+(rr?' r':'');const lab=rr?'<small>Rented</small>':'';c+=e?`<div class="${cls}" onclick="document.querySelector('.seg button').click();document.getElementById('ev-${e.id}').scrollIntoView()">${i}${lab}</div>`:`<div class="${cls}">${i}${lab}</div>`}
   return`<div class="mon"><h3>${new Date(y,m,1).toLocaleString('en-US',{month:'long',year:'numeric'})}</h3><div class="g">${c}</div></div>`}).join('')+'<p class="small legend"><span class="lg e"></span> Event &nbsp; <span class="lg r"></span> Hall Rented (private, TEST)</p>';
  $('#rentals').innerHTML=(d.rentals||[]).map(r=>`<div class="rent"><b>Hall Rented${r.test?' (TEST)':''}</b><br>${new Date(r.date+'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}, ${t12(r.start)} to ${t12(r.end)}<br><span class="small">${esc(r.type)}, private event</span></div>`).join('');
  const pf=document.getElementById('potform');if(pf)pf.onsubmit=potSubmit;
@@ -45,3 +47,9 @@ function potluckHTML(d){return`<div class="pot" id="potluck"><h4>Potluck Sign-Up
 <h4>Who's bringing what (TEST sample)</h4><ul class="who">${(d.potluckSample||[]).map(p=>`<li><b>${esc(p.cat)}:</b> ${esc(p.item)} <span class="small">(${esc(p.name)})</span></li>`).join('')}</ul></div>`}
 function potSubmit(e){e.preventDefault();const f=new FormData(e.target);let body='Halloween Party Potluck sign-up (TEST)\n\n';for(const[k,v]of f)body+=`${k}: ${v}\n`;
 location.href='mailto:VFW7243@yahoo.com?subject='+encodeURIComponent('Potluck Sign-Up: '+f.get('Category'))+'&body='+encodeURIComponent(body)}
+
+function firstSat(y,m){const d=new Date(y,m,1);d.setDate(1+(6-d.getDay()+7)%7);return d}
+function nextFirstSats(now,n,time){const out=[];let y=now.getFullYear(),m=now.getMonth();while(out.length<n){const d=firstSat(y,m);const[h,mi]=time.split(':');d.setHours(+h,+mi);if(d>now)out.push(d);m++;if(m>11){m=0;y++}}return out}
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}T${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+function expand(list,now){const out=[];list.forEach(e=>{if(e.recurring!='firstSaturday'){out.push(e);return}nextFirstSats(now,3,e.time).forEach((d,i)=>out.push({...e,id:e.id+'-'+iso(d).slice(0,10),start:iso(d),flyer:'',title:e.title+(i?'':' (Next)')}))});return out}
+function zoomHTML(e){return e.zoomUrl?`<a class="big zoom" href="${esc(e.zoomUrl)}" target="_blank" rel="noopener">Join on Zoom here</a>`:`<button class="big zoom" disabled>Join on Zoom here: Zoom link coming soon</button>`}
