@@ -13,7 +13,8 @@ async function enableMeetingPush(){
  const sub=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64u(VAPID_PUBLIC)});
  localStorage.setItem('meetingPushSub',JSON.stringify(sub));
  if(!PUSH_COLLECT_URL){msg.textContent='Reminders are on for this phone. Delivery from the Post is coming soon.';return sub}
- await fetch(PUSH_COLLECT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:'membership-meeting',sub})});
- msg.textContent='You will get a reminder 2 weeks before the Membership Meeting.';return sub}
+ const r=await fetch(PUSH_COLLECT_URL+'/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:'membership-meeting',sub})});
+ if(!r.ok)throw new Error('server '+r.status);const o=await r.json();localStorage.setItem('meetingPushId',o.id||'');
+ msg.textContent='Reminders are on for this phone.';return sub}
  catch(e){msg.textContent='Could not turn on reminders: '+e.message}}
 document.addEventListener('DOMContentLoaded',()=>{const b=document.getElementById('pushBtn');if(b)b.onclick=enableMeetingPush});

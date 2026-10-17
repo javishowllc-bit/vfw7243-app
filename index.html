@@ -10,13 +10,14 @@
  <div id="remind" class="remind" hidden></div>
  <div class="seg"><button data-v="list" class="on">List</button><button data-v="grid">Month</button></div>
  <p id="note" class="note"></p><div id="evlist"></div><div id="evgrid" hidden></div>
- <h2>Hall Rentals (Booked)</h2><p class="note">TEST bookings. Private events: only type and time shown.</p><div id="rentals"></div>
+ <h2>Hall Rentals (Booked)</h2><p class="note">Private events: only type and time shown.</p><div id="rentals"></div>
  <h2>Recent at the Post</h2><div id="past"></div>
 </section>
 <section id="hall" class="tab" hidden>
  <h2>Hall Rental Request</h2>
  <form id="hallform">
   <label>Name<input name="Name" required></label><label>Phone<input name="Phone" type="tel" required></label>
+  <fieldset class="member"><legend>Are you a member?</legend><label><input type="radio" name="Member" value="yes" required> Yes</label><label><input type="radio" name="Member" value="no" required> No</label><p class="small">Members get an automatic reminder 2 weeks before and 1 day before. (Text reminders start once the Post turns texting on.)</p></fieldset>
   <label>Email<input name="Email" type="email"></label><label>Date<input name="Date" type="date" required></label>
   <div class="row"><label>Start time<input name="Start" type="time" required></label><label>End time<input name="End" type="time" required></label></div>
   <label>Guest count<input name="Guests" type="number" min="1"></label>
@@ -38,6 +39,7 @@
  <button class="big" id="pushBtn">Turn on meeting reminders</button>
  <p class="small" id="pushMsg">Free phone notification 2 weeks before the Membership Meeting. iPhone: add the app to your Home Screen first (iOS 16.4 or newer).</p>
  <button class="big alt" id="alerts">Event reminder settings</button>
+ <p class="small">Event reminder settings asks your mobile number and &ldquo;Are you a member?&rdquo; Members get automatic reminders 2 weeks before and 1 day before an event. Text delivery starts once the Post connects a texting service; until then your choice is saved only on this phone.</p>
 </section>
 </main>
 <nav><button data-t="events" class="on">Events</button><button data-t="hall">Hall Rental</button><button data-t="contact">Contact</button></nav>
@@ -45,6 +47,7 @@
  <h3>Get event reminders?</h3>
  <p>Enter your mobile number to get reminders like: "Don't forget to register for [event], [time/date]. Preorder for discounted reserved seating."</p>
  <input id="ph" type="tel" placeholder="(555) 555-5555">
+ <fieldset class="member"><legend>Are you a member?</legend><label><input type="radio" name="isMember" id="memYes" value="yes"> Yes</label><label><input type="radio" name="isMember" id="memNo" value="no"> No</label><p class="small" id="memHint">If you are a member, you get automatic reminders 2 weeks before and 1 day before each event. If you are not a member, you do not get those early reminders.</p><p class="small memerr" id="memErr" hidden>Please choose Yes or No for &ldquo;Are you a member?&rdquo;</p></fieldset>
  <p class="small">By saving, you agree VFW Post 7243 may text you event reminders. Msg and data rates may apply. You can remove your number any time in Contact. Your number is saved only on this phone for now. Text alerts start once the Post turns them on.</p>
  <button value="save" class="big">Save</button><button value="skip" class="big alt">Skip</button>
 </form></dialog>

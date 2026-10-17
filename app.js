@@ -9,27 +9,28 @@ async function load(){let d;const loc=localStorage.getItem('draftEvents');
  $('#note').textContent=d.note||'';
  const q=new URLSearchParams(location.search).get('today');const now=q?new Date(q+'T09:00'):new Date();
  d.events=expand(d.events,now);
- const ev=d.events.sort((a,b)=>(a.start||'9').localeCompare(b.start||'9'));
+ const ev=d.events.sort((a,b)=>(a.start||'9').localeCompare(b.start||'9'));_events=ev;_now=now;buildMemberReminders();
  const when=e=>!e.start?'Date and time: details coming soon':e.start.length==10?new Date(e.start+'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})+', time: details coming soon':fmt(e.start)+(e.end?' to '+t12(e.end):'');
  $('#evlist').innerHTML=ev.map(e=>`<div class="card${e.test?' test':''}" id="ev-${esc(e.id)}">${e.flyer?`<img class="f" src="${esc(e.flyer)}" alt="Flyer">`:''}<div class="b">
  ${e.qr?`<img class="qr" src="${esc(e.qr)}" alt="QR code">`:''}<span class="tag">${esc(e.category)}</span><h3>${esc(e.title)}</h3>
  <div><b>When:</b> ${when(e)}</div>${e.location?`<div><b>Where:</b> ${esc(e.location)}</div>`:''}${e.doors?`<div><b>Doors:</b> ${t12(e.doors)}</div>`:''}${e.price?`<div><b>Price:</b> ${esc(e.price)}</div>`:''}<p class="small">${esc(e.description)}</p>
- ${e.recurring?zoomHTML(e):''}${e.potluck?potluckHTML(d):`<a class="big" href="${esc(e.rsvp)}">RSVP</a>`}</div></div>`).join('')||'<p>No events posted yet.</p>';
+ ${(e.recurring||e.category=='Meeting'||e.zoomUrl)?zoomHTML(e,now):''}${e.potluck?potluckHTML(d,e):`<a class="big" href="${esc(e.rsvp)}">RSVP</a>`}</div></div>`).join('')||'<p>No events posted yet.</p>';
 (d.reminders||[]).forEach(r=>{const e=ev.filter(x=>x.id==r.eventId||x.id.startsWith(r.eventId+'-')).find(x=>new Date(x.start)>now);if(!e||!e.start)return;const t=new Date(e.start);if(now>=new Date(t-r.remindDaysBefore*864e5)&&now<t){$('#remind').hidden=false;$('#remind').textContent=r.text.replace('{date}',new Date(e.start).toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'}))}});
  const months=[0,1].map(i=>{const x=new Date(now.getFullYear(),now.getMonth()+i,1);return[x.getFullYear(),x.getMonth()]});
  $('#evgrid').innerHTML=months.map(([y,m])=>{const first=new Date(y,m,1).getDay(),n=new Date(y,m+1,0).getDate();let c='SMTWTFS'.split('').map(x=>`<div class="h">${x}</div>`).join('')+'<div></div>'.repeat(first);
   for(let i=1;i<=n;i++){const k=`${y}-${String(m+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;const e=ev.find(x=>x.start&&x.start.startsWith(k));const rr=(d.rentals||[]).find(x=>x.date==k);const cls=(e?'e':'')+(e&&!e.test?' real':'')+(rr?' r':'');const lab=rr?'<small>Rented</small>':'';c+=e?`<div class="${cls}" onclick="document.querySelector('.seg button').click();document.getElementById('ev-${e.id}').scrollIntoView()">${i}${lab}</div>`:`<div class="${cls}">${i}${lab}</div>`}
-  return`<div class="mon"><h3>${new Date(y,m,1).toLocaleString('en-US',{month:'long',year:'numeric'})}</h3><div class="g">${c}</div></div>`}).join('')+'<p class="small legend"><span class="lg e"></span> Event &nbsp; <span class="lg r"></span> Hall Rented (private, TEST)</p>';
+  return`<div class="mon"><h3>${new Date(y,m,1).toLocaleString('en-US',{month:'long',year:'numeric'})}</h3><div class="g">${c}</div></div>`}).join('')+'<p class="small legend"><span class="lg e"></span> Event &nbsp; <span class="lg r"></span> Hall Rented (private)</p>';
  $('#rentals').innerHTML=(d.rentals||[]).map(r=>`<div class="rent"><b>Hall Rented${r.test?' (TEST)':''}</b><br>${new Date(r.date+'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}, ${t12(r.start)} to ${t12(r.end)}<br><span class="small">${esc(r.type)}, private event</span></div>`).join('');
- const pf=document.getElementById('potform');if(pf)pf.onsubmit=potSubmit;
+ const pf=document.getElementById('potform');if(pf)pf.onsubmit=potSubmit;prefillContactForms();
  $('#past').innerHTML=(d.past||[]).map(p=>`<div class="past">${p.flyer?`<img src="${esc(p.flyer)}" alt="">`:''}<div><b>${esc(p.title)}</b><br><span class="small">${new Date(p.date+'T12:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}</span></div></div>`).join('');
 }
 load();
-$('#hallform').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);let body='Hall rental request\n\n';for(const[k,v]of f)body+=`${k}: ${v}\n`;
+prefillContactForms();
+$('#hallform').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);const mem=f.get('Member');if(mem){saveSignup(f.get('Phone'),mem=='yes');if(mem=='yes'&&f.get('Date'))addMemberReminders('Hall Rental ('+(f.get('Date'))+')',f.get('Date')+'T'+(f.get('Start')||'12:00'),f.get('Phone'))}let body='Hall rental request\n\n';for(const[k,v]of f)body+=`${k}: ${v}\n`;
  location.href='mailto:VFW7243@yahoo.com?subject='+encodeURIComponent('Hall Rental Request '+f.get('Date'))+'&body='+encodeURIComponent(body)};
 const dlg=$('#phone');
-function ask(){$('#ph').value=localStorage.getItem('phone')||'';dlg.showModal()}
-$('#pf').onsubmit=e=>{if(e.submitter&&e.submitter.value=='save'&&$('#ph').value.trim())localStorage.setItem('phone',$('#ph').value.trim());else if(e.submitter&&e.submitter.value=='skip'&&!$('#ph').value.trim())localStorage.removeItem('phone');localStorage.setItem('asked','1')};
+function ask(){prefillContactForms();const ans=getStoredContact().memberAnswer;const y=$('#memYes'),n=$('#memNo');if(y)y.checked=ans=='yes';if(n)n.checked=ans=='no';const er=$('#memErr');if(er)er.hidden=true;dlg.showModal()}
+$('#pf').onsubmit=e=>{const save=e.submitter&&e.submitter.value=='save';if(save&&$('#ph').value.trim()){const c=document.querySelector('input[name="isMember"]:checked');if(!c){e.preventDefault();$('#memErr').hidden=false;return}localStorage.setItem('phone',$('#ph').value.trim());saveSignup($('#ph').value.trim(),c.value=='yes')}else if(e.submitter&&e.submitter.value=='skip'&&!$('#ph').value.trim()){localStorage.removeItem('phone');localStorage.removeItem('reminderSignup');localStorage.removeItem('isMember');localStorage.setItem('memberReminders','[]')}localStorage.setItem('asked','1')};
 $('#alerts').onclick=ask;
 if(!localStorage.getItem('asked'))ask();
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
@@ -38,18 +39,30 @@ $('#cause').onchange=()=>$('#cause').classList.toggle('urgent',$('#cause').value
 $('#giveBtn').onclick=()=>{const c=$('#cause').value;location.href='mailto:VFW7243@yahoo.com?subject='+encodeURIComponent('Donation: '+c)+'&body='+encodeURIComponent('I would like to donate to: '+c+'\n\nName:\nPhone:\nAmount:\n')};
 $('#closeDonate').onclick=()=>$('#donate').close();
 
-function potluckHTML(d){return`<div class="pot" id="potluck"><h4>Potluck Sign-Up (TEST)</h4><form id="potform">
+function potluckHTML(d,e){return`<div class="pot" id="potluck"><h4>Potluck Sign-Up (TEST)</h4><form id="potform">
 <label>Name<input name="Name" required></label><label>Phone<input name="Phone" type="tel" required></label>
+<fieldset class="member"><legend>Are you a member?</legend><label><input type="radio" name="Member" value="yes" required> Yes</label><label><input type="radio" name="Member" value="no" required> No</label><p class="small">Members get an automatic reminder 2 weeks before and 1 day before.</p></fieldset>
 <label>Number of guests<input name="Guests" type="number" min="1" value="1" required></label>
 <label>What will you bring? (category)<select name="Category" required><option value="">Choose one</option><option>Main dish</option><option>Side</option><option>Dessert</option><option>Drinks</option><option>Plates/Utensils</option><option>Other</option></select></label>
 <label>What will you bring? (item)<input name="Item" required placeholder="Example: Chicken enchiladas"></label>
 <button class="big">Sign Up by Email</button></form><p class="small">Opens your email app addressed to VFW7243@yahoo.com.</p>
 <h4>Who's bringing what (TEST sample)</h4><ul class="who">${(d.potluckSample||[]).map(p=>`<li><b>${esc(p.cat)}:</b> ${esc(p.item)} <span class="small">(${esc(p.name)})</span></li>`).join('')}</ul></div>`}
-function potSubmit(e){e.preventDefault();const f=new FormData(e.target);let body='Halloween Party Potluck sign-up (TEST)\n\n';for(const[k,v]of f)body+=`${k}: ${v}\n`;
+function potSubmit(e){e.preventDefault();const f=new FormData(e.target);const mem=f.get('Member');if(mem){saveSignup(f.get('Phone'),mem=='yes');if(mem=='yes'){const pe=_events.find(x=>x.potluck);if(pe&&pe.start)addMemberReminders(pe.title,pe.start,f.get('Phone'))}}let body='Potluck sign-up\n\n';for(const[k,v]of f)body+=`${k}: ${v}\n`;
 location.href='mailto:VFW7243@yahoo.com?subject='+encodeURIComponent('Potluck Sign-Up: '+f.get('Category'))+'&body='+encodeURIComponent(body)}
 
 function firstSat(y,m){const d=new Date(y,m,1);d.setDate(1+(6-d.getDay()+7)%7);return d}
 function nextFirstSats(now,n,time){const out=[];let y=now.getFullYear(),m=now.getMonth();while(out.length<n){const d=firstSat(y,m);const[h,mi]=time.split(':');d.setHours(+h,+mi);if(d>now)out.push(d);m++;if(m>11){m=0;y++}}return out}
 const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}T${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
 function expand(list,now){const out=[];list.forEach(e=>{if(e.recurring!='firstSaturday'){out.push(e);return}nextFirstSats(now,3,e.time).forEach((d,i)=>out.push({...e,id:e.id+'-'+iso(d).slice(0,10),start:iso(d),flyer:'',title:e.title+(i?'':' (Next)')}))});return out}
-function zoomHTML(e){return e.zoomUrl?`<a class="big zoom" href="${esc(e.zoomUrl)}" target="_blank" rel="noopener">Join on Zoom here</a>`:`<button class="big zoom" disabled>Join on Zoom here: Zoom link coming soon</button>`}
+const TZ='America/Los_Angeles';let _events=[],_now=new Date();
+const laDay=d=>new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d instanceof Date?d:new Date(d));
+function zoomHTML(e,now){const day=e.start?String(e.start).slice(0,10):'';const isDay=!!day&&day===laDay(now||new Date());const txt='Join on Zoom \u2014 Click here';
+ if(isDay)return e.zoomUrl?`<a class="big zoom" href="${esc(e.zoomUrl)}" target="_blank" rel="noopener">${txt}</a>${e.zoomMeetingId?`<p class="small zoomday">Meeting ID: ${esc(e.zoomMeetingId)}${e.zoomPasscode?' &middot; Passcode: '+esc(e.zoomPasscode):''}</p>`:''}`:`<button class="big zoom" disabled>${txt}: Zoom link coming soon</button>`;
+ return `<p class="small zoomday">On Zoom: the &ldquo;${txt}&rdquo; button appears here on meeting day${day?' ('+day+')':''}.${e.zoomUrl?'':' Zoom link coming soon.'}</p>`}
+function getSignup(){try{return JSON.parse(localStorage.getItem('reminderSignup')||'null')}catch(x){return null}}
+function memberSchedule(events,signup,now){if(!signup||!signup.isMember||!signup.phone)return[];const out=[];(events||[]).forEach(e=>{if(!e.start)return;const isMeeting=e.category=='Meeting'||e.recurring||String(e.id).startsWith('membership');if(!isMeeting)return;const st=new Date(e.start.length==10?e.start+'T12:00':e.start);if(!(st>now))return;[14,1].forEach(off=>{const rd=new Date(st);rd.setDate(rd.getDate()-off);if(rd<=now)return;out.push({eventId:e.id,title:e.title,eventStart:e.start,remindAt:rd.toISOString(),remindDaysBefore:off,channel:'sms',phone:signup.phone,timezone:TZ,status:'scheduled-pending-sms-backend'})})});return out.sort((a,b)=>a.remindAt.localeCompare(b.remindAt))}
+function buildMemberReminders(){const s=getSignup();const sched=s?memberSchedule(_events,s,_now):[];try{localStorage.setItem('memberReminders',JSON.stringify(sched))}catch(x){}return sched}
+function getStoredContact(){const s=getSignup();const phone=(s&&s.phone)||localStorage.getItem('phone')||'';const ans=(s&&s.memberAnswer)||localStorage.getItem('isMember')||'';return{phone:String(phone).trim(),memberAnswer:ans}}
+function prefillContactForms(){const c=getStoredContact();if(!c.phone&&!c.memberAnswer)return;document.querySelectorAll('input[name="Phone"],input#ph').forEach(i=>{if(c.phone)i.value=c.phone});document.querySelectorAll('input[name="Member"],input[name="isMember"]').forEach(r=>{if(c.memberAnswer)r.checked=r.value==c.memberAnswer});}
+function saveSignup(phone,isMember){const s={phone:String(phone||'').trim(),isMember:!!isMember,memberAnswer:isMember?'yes':'no',signedUpAt:new Date().toISOString(),timezone:TZ,reminderOffsetsDays:isMember?[14,1]:[]};try{localStorage.setItem('reminderSignup',JSON.stringify(s));localStorage.setItem('isMember',s.memberAnswer);if(s.phone){localStorage.setItem('phone',s.phone);localStorage.setItem('asked','1')}}catch(x){}buildMemberReminders();prefillContactForms();return s}
+function addMemberReminders(title,startIso,phone){if(!startIso)return;const st=new Date(startIso.length==10?startIso+'T12:00':startIso);if(isNaN(st))return;let cur=[];try{cur=JSON.parse(localStorage.getItem('memberReminders')||'[]')}catch(x){}[14,1].forEach(off=>{const rd=new Date(st);rd.setDate(rd.getDate()-off);const r={eventId:'',title:title,eventStart:startIso,remindAt:rd.toISOString(),remindDaysBefore:off,channel:'sms',phone:String(phone||'').trim(),timezone:TZ,status:'scheduled-pending-sms-backend'};if(!cur.some(x=>x.title==r.title&&x.remindDaysBefore==off))cur.push(r)});cur.sort((a,b)=>a.remindAt.localeCompare(b.remindAt));try{localStorage.setItem('memberReminders',JSON.stringify(cur))}catch(x){}}

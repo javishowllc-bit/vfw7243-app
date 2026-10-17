@@ -8,5 +8,16 @@
   "title": "VFW Post 7243",
   "body": "Reminder: Membership Meeting {date} at 11 AM in the hall, 12064 Centralia Rd, Hawaiian Gardens. All members please attend.",
   "url": "https://javishowllc-bit.github.io/vfw7243-app/"
+ },
+ "memberSmsReminders": {
+  "appliesTo": "Phone-number signups where 'Are you a member?' = yes",
+  "daysBefore": [
+   14,
+   1
+  ],
+  "timezone": "America/Los_Angeles",
+  "channel": "sms",
+  "approved": false,
+  "delivery": "PENDING: no SMS provider connected. push/send.js only sends Web Push for membershipMeeting; do not treat this entry as sending texts."
  }
 }
