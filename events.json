@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-17",
- "note": "Membership Meeting is real (first Saturday monthly 11 AM PT). Sports watch events Oct 17 to Nov 16, 2026 added as Watch at the Post promos, times in America/Los_Angeles verified from ESPN schedules on Oct 17, 2026. Covers all Lakers games, all NFL games, and all remaining MLB postseason games in window. Dodgers and Angels have no games in this window (Dodgers postseason ended Oct 15, Angels regular season ended Sep 27). World Series opponent listed as Rays/Guardians winner per ESPN placeholder on Oct 17. No test events. Veterans Day: City of Hawaiian Gardens Veterans Day Celebration added Fri Nov 6, 2026 6:00-8:00 PM PT at C. Robert Lee Activity Center, 21815 Pioneer Blvd, verified from eleon@hgcity.org email Oct 6, 2026 and hgcity.org, with official city flyer img/flyers/veterans-day-2026.png/.pdf.",
+ "note": "Membership Meeting is real (first Saturday monthly 11 AM PT). Sports watch events Oct 17 to Nov 16, 2026 added as Watch at the Post promos, times in America/Los_Angeles verified from ESPN schedules on Oct 17, 2026. Covers all Lakers games, all NFL games, and all remaining MLB postseason games in window. Dodgers and Angels have no games in this window (Dodgers postseason ended Oct 15, Angels regular season ended Sep 27). World Series opponent listed as Rays/Guardians winner per ESPN placeholder on Oct 17. No test events. Veterans Day: City of Hawaiian Gardens Veterans Day Celebration added Fri Nov 6, 2026 6:00-8:00 PM PT at C. Robert Lee Activity Center, 21815 Pioneer Blvd, verified from eleon@hgcity.org email Oct 6, 2026 and hgcity.org, with official city flyer img/flyers/veterans-day-2026.png/.pdf. Jordan working the Post added Sun Oct 18, 2026 (date-only, hours not given — time TBD, America/Los_Angeles), with a 1-day-before in-app reminder banner.",
  "events": [
   {
    "id": "membership",
@@ -30,6 +30,19 @@
    "test": false,
    "espn_id": "401908027",
    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261017"
+  },
+  {
+   "id": "jordan-working-post-2026-10-18",
+   "title": "Jordan working the Post",
+   "category": "Post Event",
+   "start": "2026-10-18",
+   "allDay": true,
+   "timeTbd": true,
+   "timezone": "America/Los_Angeles",
+   "location": "The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
+   "description": "Jordan working the Post on Sun Oct 18, 2026. Hours were not given, so no start/end time is listed — time TBD, details coming soon. All times America/Los_Angeles.",
+   "rsvp": "mailto:VFW7243@yahoo.com?subject=Jordan%20working%20the%20Post%20Oct%2018",
+   "test": false
   },
   {
    "id": "nfl-401872996",
@@ -1300,6 +1313,11 @@
    "eventId": "membership",
    "remindDaysBefore": 14,
    "text": "Reminder: Membership Meeting {date} at 11 AM in the hall, 12064 Centralia Rd, Hawaiian Gardens."
+  },
+  {
+   "eventId": "jordan-working-post-2026-10-18",
+   "remindDaysBefore": 1,
+   "text": "Jordan working the Post tomorrow: {date} at The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Hours: time TBD — details coming soon."
   }
  ],
  "potluckSample": [],

@@ -19,5 +19,16 @@
   "channel": "sms",
   "approved": false,
   "delivery": "PENDING: no SMS provider connected. push/send.js only sends Web Push for membershipMeeting; do not treat this entry as sending texts."
+ },
+ "jordanWorkingPost2026-10-18": {
+  "eventId": "jordan-working-post-2026-10-18",
+  "date": "2026-10-18",
+  "timezone": "America/Los_Angeles",
+  "daysBefore": 1,
+  "approved": false,
+  "title": "VFW Post 7243",
+  "body": "Jordan working the Post tomorrow: Sun, Oct 18 at The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Hours: time TBD.",
+  "url": "https://javishowllc-bit.github.io/vfw7243-app/",
+  "delivery": "PENDING: same Web Push backend as membershipMeeting is not connected (PUSH_COLLECT_URL empty in push.js, push/send.js only sends membershipMeeting and is gated approved:false, subscriptions come from a secret not in repo). Today the delivered notification is the in-app reminder banner in events.json reminders[], shown when the app is opened during the 1-day-before window. A real lock-screen push needs PUSH_COLLECT_URL/backend + subscriptions + approved:true + a sender run for this event."
  }
 }
