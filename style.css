@@ -26,3 +26,12 @@ header{position:relative}.donate{position:absolute;right:10px;top:12px;backgroun
 
 .member{border:1px solid #bbb;border-radius:8px;padding:10px 12px;margin:10px 0}.member legend{font-weight:700;padding:0 4px}.member label{display:inline-flex;align-items:center;gap:6px;margin:4px 18px 4px 0;font-weight:600}.member input{width:auto;margin:0;padding:0}.member .small{margin:6px 0 0}.memerr{color:#c00;font-weight:700}.zoomday{font-weight:700}
 .zoom{background:#2D8CFF;color:#fff;margin-bottom:8px}.zoom[disabled]{background:#9bb7d9;opacity:.85;cursor:not-allowed}.g .real{outline:2px solid #002868}
+
+/* First-open pop-up (v12) */
+#firstEvent{width:min(92vw,420px);padding:14px}
+#firstEvent::backdrop{background:rgba(10,15,30,.62)}
+#firstEventBody{cursor:pointer}
+#firstEventBody img{width:100%;display:block;border-radius:10px}
+.firstpop-card{background:#fff;border:2px solid var(--n);border-radius:12px;padding:18px;text-align:center}
+.firstpop-card h3{color:var(--n);margin:8px 0;font-size:22px}
+.firstpop-kicker{color:var(--r);font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:1px}

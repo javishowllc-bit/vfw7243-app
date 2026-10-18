@@ -8,8 +8,8 @@
 <main>
 <section id="events" class="tab">
  <div id="remind" class="remind" hidden></div>
- <div class="seg"><button data-v="list" class="on">List</button><button data-v="grid">Month</button></div>
- <p id="note" class="note"></p><div id="evlist"></div><div id="evgrid" hidden></div>
+ <div class="seg"><button data-v="list">List</button><button data-v="grid" class="on">Month</button></div>
+ <p id="note" class="note"></p><div id="evlist" hidden></div><div id="evgrid"></div>
  <h2>Hall Rentals (Booked)</h2><p class="note">Private events: only type and time shown.</p><div id="rentals"></div>
  <h2>Recent at the Post</h2><div id="past"></div>
 </section>
@@ -51,6 +51,7 @@
  <p class="small">By saving, you agree VFW Post 7243 may text you event reminders. Msg and data rates may apply. You can remove your number any time in Contact. Your number is saved only on this phone for now. Text alerts start once the Post turns them on.</p>
  <button value="save" class="big">Save</button><button value="skip" class="big alt">Skip</button>
 </form></dialog>
+<dialog id="firstEvent" aria-label="First upcoming event"><div id="firstEventBody"></div><button id="firstEventClose" class="big alt" type="button">Close</button><p class="small">Tap the event to open it. This closes automatically.</p></dialog>
 <dialog id="donate"><h3>Donate to VFW Post 7243</h3>
  <label>Choose a cause<select id="cause"><option>Buddy Poppies</option><option>Holiday Toy Drive</option><option>Veterans Ball</option><option value="Utilities" class="urgentopt">UTILITIES (SERIOUS HELP)</option></select></label>
  <p class="urgentnote">Utilities: Serious help needed</p>

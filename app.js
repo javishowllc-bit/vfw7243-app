@@ -1,6 +1,8 @@
 const $=s=>document.querySelector(s);
+let _eventsLoaded=false,_firstPopupTimer=null,_flowPhonePending=false;
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x==b));document.querySelectorAll('.tab').forEach(t=>t.hidden=t.id!=b.dataset.t);scrollTo(0,0)});
-document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x==b));$('#evlist').hidden=b.dataset.v!='list';$('#evgrid').hidden=b.dataset.v!='grid'});
+function setView(v){document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x.dataset.v==v));$('#evlist').hidden=v!='list';$('#evgrid').hidden=v!='grid'}
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt=d=>new Date(d).toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 const t12=t=>{if(!t)return'';let[h,m]=t.split(':');h=+h;return(h%12||12)+':'+m+(h<12?' AM':' PM')};
@@ -22,6 +24,7 @@ const _rtexts=[];(d.reminders||[]).forEach(r=>{const pd=x=>new Date(x.length==10
   return`<div class="mon"><h3>${new Date(y,m,1).toLocaleString('en-US',{month:'long',year:'numeric'})}</h3><div class="g">${c}</div></div>`}).join('')+'<p class="small legend"><span class="lg e"></span> Event &nbsp; <span class="lg r"></span> Hall Rented (private)</p>';
  $('#rentals').innerHTML=(d.rentals||[]).map(r=>`<div class="rent"><b>Hall Rented${r.test?' (TEST)':''}</b><br>${new Date(r.date+'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}, ${t12(r.start)} to ${t12(r.end)}<br><span class="small">${esc(r.type)}, private event</span></div>`).join('');
  prefillContactForms();
+ _whenFn=when;_eventsLoaded=true;maybeShowFirstEventPopup();
  $('#past').innerHTML=(d.past||[]).map(p=>`<div class="past">${p.flyer?`<img src="${esc(p.flyer)}" alt="">`:''}<div><b>${esc(p.title)}</b><br><span class="small">${new Date(p.date+'T12:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}</span></div></div>`).join('');
 }
 load();
@@ -32,7 +35,24 @@ const dlg=$('#phone');
 function ask(){prefillContactForms();const ans=getStoredContact().memberAnswer;const y=$('#memYes'),n=$('#memNo');if(y)y.checked=ans=='yes';if(n)n.checked=ans=='no';const er=$('#memErr');if(er)er.hidden=true;dlg.showModal()}
 $('#pf').onsubmit=e=>{const save=e.submitter&&e.submitter.value=='save';if(save&&$('#ph').value.trim()){const c=document.querySelector('input[name="isMember"]:checked');if(!c){e.preventDefault();$('#memErr').hidden=false;return}localStorage.setItem('phone',$('#ph').value.trim());saveSignup($('#ph').value.trim(),c.value=='yes')}else if(e.submitter&&e.submitter.value=='skip'&&!$('#ph').value.trim()){localStorage.removeItem('phone');localStorage.removeItem('reminderSignup');localStorage.removeItem('isMember');localStorage.setItem('memberReminders','[]')}localStorage.setItem('asked','1')};
 $('#alerts').onclick=ask;
-if(!localStorage.getItem('asked'))ask();
+/* First-open flow (Javier spec, v12): phone FIRST, then 4-second first-event pop-up, then calendar.
+   What was wrong before: a permanent localStorage 'asked' flag was set on ANY Skip / empty Save
+   (and by other saves), so after one dismissal the modal never auto-showed again even with no
+   phone saved; it was also not sequenced with load/calendar. Now the auto-ask is gated on
+   having NO saved phone, shows right away on script load, and only suppresses repeats for
+   that session on Skip/close (sessionStorage), so a saved phone never asks again while an
+   unsaved visitor is asked again on a later fresh open until they save. */
+setView('grid');
+(function firstOpenPhone(){
+  const saved=getStoredContact().phone;
+  if(saved){return}
+  if(sessionStorage.getItem('phoneAskDoneThisSession')=='1'){return}
+  _flowPhonePending=true;
+  try{ask()}catch(e){_flowPhonePending=false}
+})();
+$('#phone').addEventListener('close',()=>{sessionStorage.setItem('phoneAskDoneThisSession','1');if(_flowPhonePending){_flowPhonePending=false;maybeShowFirstEventPopup()}});
+$('#firstEventClose').onclick=e=>{e.stopPropagation();closeFirstEventPopup()};
+$('#firstEvent').addEventListener('close',()=>{if(_firstPopupTimer){clearTimeout(_firstPopupTimer);_firstPopupTimer=null}});
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 $('#donateBtn').onclick=()=>$('#donate').showModal();
 $('#cause').onchange=()=>$('#cause').classList.toggle('urgent',$('#cause').value=='Utilities');
@@ -56,3 +76,41 @@ function getStoredContact(){const s=getSignup();const phone=(s&&s.phone)||localS
 function prefillContactForms(){const c=getStoredContact();if(!c.phone&&!c.memberAnswer)return;document.querySelectorAll('input[name="Phone"],input#ph').forEach(i=>{if(c.phone)i.value=c.phone});document.querySelectorAll('input[name="Member"],input[name="isMember"]').forEach(r=>{if(c.memberAnswer)r.checked=r.value==c.memberAnswer});}
 function saveSignup(phone,isMember){const s={phone:String(phone||'').trim(),isMember:!!isMember,memberAnswer:isMember?'yes':'no',signedUpAt:new Date().toISOString(),timezone:TZ,reminderOffsetsDays:isMember?[14,1]:[]};try{localStorage.setItem('reminderSignup',JSON.stringify(s));localStorage.setItem('isMember',s.memberAnswer);if(s.phone){localStorage.setItem('phone',s.phone);localStorage.setItem('asked','1')}}catch(x){}buildMemberReminders();prefillContactForms();return s}
 function addMemberReminders(title,startIso,phone){if(!startIso)return;const st=new Date(startIso.length==10?startIso+'T12:00':startIso);if(isNaN(st))return;let cur=[];try{cur=JSON.parse(localStorage.getItem('memberReminders')||'[]')}catch(x){}[14,1].forEach(off=>{const rd=new Date(st);rd.setDate(rd.getDate()-off);const r={eventId:'',title:title,eventStart:startIso,remindAt:rd.toISOString(),remindDaysBefore:off,channel:'sms',phone:String(phone||'').trim(),timezone:TZ,status:'scheduled-pending-sms-backend'};if(!cur.some(x=>x.title==r.title&&x.remindDaysBefore==off))cur.push(r)});cur.sort((a,b)=>a.remindAt.localeCompare(b.remindAt));try{localStorage.setItem('memberReminders',JSON.stringify(cur))}catch(x){}}
+
+let _whenFn=null;
+function eventWhenForPopup(e){if(_whenFn)return _whenFn(e);return e&&e.start?String(e.start):''}
+function firstUpcomingEvent(){
+  if(!_events||!_events.length)return null;
+  const now=_now||new Date();
+  for(const e of _events){
+    if(!e.start)continue;
+    // Date-only (all-day) events count as upcoming through the end of that day.
+    const end=new Date(e.start.length==10?e.start+'T23:59:59':e.start);
+    if(!isNaN(end)&&end>=now)return e;
+  }
+  return null;
+}
+function closeFirstEventPopup(){const d=$('#firstEvent');if(d&&d.open)d.close()}
+function openFirstEvent(e){
+  closeFirstEventPopup();
+  // Landing view is the calendar, but tapping the pop-up opens the event card (list view).
+  setView('list');
+  const el=document.getElementById('ev-'+e.id);
+  if(el){el.scrollIntoView({behavior:'smooth',block:'start'});el.style.outline='3px solid #9B1B30';setTimeout(()=>{el.style.outline=''},2500)}
+}
+function maybeShowFirstEventPopup(){
+  const dlg=$('#firstEvent');if(!dlg||dlg.open)return;
+  if(sessionStorage.getItem('firstEventPopupShown')=='1')return; // once per open/session
+  const phoneDlg=$('#phone');if(phoneDlg&&phoneDlg.open)return; // phone first; close handler re-calls this
+  if(!_eventsLoaded)return; // load() re-calls this
+  const e=firstUpcomingEvent();if(!e)return;
+  sessionStorage.setItem('firstEventPopupShown','1');
+  const body=$('#firstEventBody');
+  body.innerHTML=e.flyer
+    ? `<div class="firstpop-kicker">Coming up at the Post</div><img src="${esc(e.flyer)}" alt="Flyer for ${esc(e.title)}"><h3 style="text-align:center;color:#1B2A4A">${esc(e.title)}</h3><p style="text-align:center"><b>${esc(eventWhenForPopup(e))}</b></p>`
+    : `<div class="firstpop-card"><div class="firstpop-kicker">Coming up at the Post</div><h3>${esc(e.title)}</h3><p><b>${esc(eventWhenForPopup(e))}</b></p>${e.location?`<p>${esc(e.location)}</p>`:''}</div>`;
+  body.onclick=()=>openFirstEvent(e);
+  try{dlg.showModal()}catch(x){return}
+  if(_firstPopupTimer)clearTimeout(_firstPopupTimer);
+  _firstPopupTimer=setTimeout(()=>{closeFirstEventPopup()},4000); // auto-dismiss after exactly 4 seconds
+}
