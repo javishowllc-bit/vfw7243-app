@@ -40,6 +40,9 @@
   "title": "VFW Post 7243",
   "body": "Football Sunday Oct 18: Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey. Rams game at 1:05 PM PT at the Post.",
   "url": "https://javishowllc-bit.github.io/vfw7243-app/",
-  "delivery": "PENDING: no real push backend is connected for this event (same status as the Jordan reminder). Today the delivered notification is the in-app reminder banner in events.json reminders[], shown when the app is opened from Oct 17 at 1:05 PM PT until the Oct 18 1:05 PM PT game start. A real lock-screen push needs a connected push backend, subscriptions, approved:true, and a sender run for this event."
+  "delivery": "PENDING PUSH BACKEND: no real push backend is connected for this event (same status as the Jordan reminder; approved stays false). The delivered notification is the in-app reminder banner in events.json reminders[], now gated by notifyAt so it appears only when the app is opened at/after Sat Oct 17, 2026 8:00 PM America/Los_Angeles, until the Oct 18 1:05 PM PT game start — hidden before 8:00 PM PT. It does NOT wake closed phones. A real lock-screen push at 8 PM needs a connected push backend, subscriptions, approved:true, and a sender run for this event at that time.",
+  "notifyAt": "2026-10-17T20:00:00-07:00",
+  "notifyAtLocal": "2026-10-17 20:00",
+  "notifyTime": "20:00"
  }
 }

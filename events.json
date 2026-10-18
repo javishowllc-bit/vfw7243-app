@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-17",
- "note": "Membership Meeting is real (first Saturday monthly 11 AM PT). Sports watch events Oct 17 to Nov 16, 2026 added as Watch at the Post promos, times in America/Los_Angeles verified from ESPN schedules on Oct 17, 2026. Covers all Lakers games, all NFL games, and all remaining MLB postseason games in window. Dodgers and Angels have no games in this window (Dodgers postseason ended Oct 15, Angels regular season ended Sep 27). World Series opponent listed as Rays/Guardians winner per ESPN placeholder on Oct 17. No test events. Veterans Day: City of Hawaiian Gardens Veterans Day Celebration added Fri Nov 6, 2026 6:00-8:00 PM PT at C. Robert Lee Activity Center, 21815 Pioneer Blvd, verified from eleon@hgcity.org email Oct 6, 2026 and hgcity.org, with official city flyer img/flyers/veterans-day-2026.png/.pdf. Jordan working the Post added Sun Oct 18, 2026 (date-only, hours not given — time TBD, America/Los_Angeles), with a 1-day-before in-app reminder banner. Rams promo added: Football Sunday Oct 18, 2026, Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey, with flyer img/flyers/rams-halftime-jello-2026-10-18.png/.pdf and a 1-day-before in-app reminder banner.",
+ "note": "Membership Meeting is real (first Saturday monthly 11 AM PT). Sports watch events Oct 17 to Nov 16, 2026 added as Watch at the Post promos, times in America/Los_Angeles verified from ESPN schedules on Oct 17, 2026. Covers all Lakers games, all NFL games, and all remaining MLB postseason games in window. Dodgers and Angels have no games in this window (Dodgers postseason ended Oct 15, Angels regular season ended Sep 27). World Series opponent listed as Rays/Guardians winner per ESPN placeholder on Oct 17. No test events. Veterans Day: City of Hawaiian Gardens Veterans Day Celebration added Fri Nov 6, 2026 6:00-8:00 PM PT at C. Robert Lee Activity Center, 21815 Pioneer Blvd, verified from eleon@hgcity.org email Oct 6, 2026 and hgcity.org, with official city flyer img/flyers/veterans-day-2026.png/.pdf. Jordan working the Post added Sun Oct 18, 2026 (date-only, hours not given — time TBD, America/Los_Angeles), with a 1-day-before in-app reminder banner. Rams promo added: Football Sunday Oct 18, 2026, Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey, with flyer img/flyers/rams-halftime-jello-2026-10-18.png/.pdf and a 1-day-before in-app reminder banner. Rams promo in-app reminder banner is timed for Sat Oct 17, 2026 at 8:00 PM America/Los_Angeles (notifyAt on the reminder), through the Oct 18 1:05 PM PT game start.",
  "events": [
   {
    "id": "membership",
@@ -1324,7 +1324,11 @@
   {
    "eventId": "nfl-401873004",
    "remindDaysBefore": 1,
-   "text": "Football Sunday Oct 18: Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey. Rams game at 1:05 PM PT at the Post, Arizona Cardinals vs Los Angeles Rams. Watch at VFW Post 7243."
+   "text": "Football Sunday Oct 18: Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey. Rams game at 1:05 PM PT at the Post, Arizona Cardinals vs Los Angeles Rams. Watch at VFW Post 7243.",
+   "notifyAt": "2026-10-17T20:00:00-07:00",
+   "notifyAtLocal": "2026-10-17 20:00",
+   "timezone": "America/Los_Angeles",
+   "notifyNote": "Javier instructed 8:00 PM Pacific on Sat Oct 17, 2026. In-app Rams banner is hidden before this time, shows at/after it when the app is opened, until the Sun Oct 18 1:05 PM PT game start. This is not a lock-screen push."
   }
  ],
  "potluckSample": [],
