@@ -30,5 +30,16 @@
   "body": "Jordan working the Post tomorrow: Sun, Oct 18 at The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Hours: time TBD.",
   "url": "https://javishowllc-bit.github.io/vfw7243-app/",
   "delivery": "PENDING: same Web Push backend as membershipMeeting is not connected (PUSH_COLLECT_URL empty in push.js, push/send.js only sends membershipMeeting and is gated approved:false, subscriptions come from a secret not in repo). Today the delivered notification is the in-app reminder banner in events.json reminders[], shown when the app is opened during the 1-day-before window. A real lock-screen push needs PUSH_COLLECT_URL/backend + subscriptions + approved:true + a sender run for this event."
+ },
+ "ramsHalftimeJello2026-10-18": {
+  "eventId": "nfl-401873004",
+  "date": "2026-10-18T13:05",
+  "timezone": "America/Los_Angeles",
+  "daysBefore": 1,
+  "approved": false,
+  "title": "VFW Post 7243",
+  "body": "Football Sunday Oct 18: Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey. Rams game at 1:05 PM PT at the Post.",
+  "url": "https://javishowllc-bit.github.io/vfw7243-app/",
+  "delivery": "PENDING: no real push backend is connected for this event (same status as the Jordan reminder). Today the delivered notification is the in-app reminder banner in events.json reminders[], shown when the app is opened from Oct 17 at 1:05 PM PT until the Oct 18 1:05 PM PT game start. A real lock-screen push needs a connected push backend, subscriptions, approved:true, and a sender run for this event."
  }
 }

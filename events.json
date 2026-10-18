@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-17",
- "note": "Membership Meeting is real (first Saturday monthly 11 AM PT). Sports watch events Oct 17 to Nov 16, 2026 added as Watch at the Post promos, times in America/Los_Angeles verified from ESPN schedules on Oct 17, 2026. Covers all Lakers games, all NFL games, and all remaining MLB postseason games in window. Dodgers and Angels have no games in this window (Dodgers postseason ended Oct 15, Angels regular season ended Sep 27). World Series opponent listed as Rays/Guardians winner per ESPN placeholder on Oct 17. No test events. Veterans Day: City of Hawaiian Gardens Veterans Day Celebration added Fri Nov 6, 2026 6:00-8:00 PM PT at C. Robert Lee Activity Center, 21815 Pioneer Blvd, verified from eleon@hgcity.org email Oct 6, 2026 and hgcity.org, with official city flyer img/flyers/veterans-day-2026.png/.pdf. Jordan working the Post added Sun Oct 18, 2026 (date-only, hours not given — time TBD, America/Los_Angeles), with a 1-day-before in-app reminder banner.",
+ "note": "Membership Meeting is real (first Saturday monthly 11 AM PT). Sports watch events Oct 17 to Nov 16, 2026 added as Watch at the Post promos, times in America/Los_Angeles verified from ESPN schedules on Oct 17, 2026. Covers all Lakers games, all NFL games, and all remaining MLB postseason games in window. Dodgers and Angels have no games in this window (Dodgers postseason ended Oct 15, Angels regular season ended Sep 27). World Series opponent listed as Rays/Guardians winner per ESPN placeholder on Oct 17. No test events. Veterans Day: City of Hawaiian Gardens Veterans Day Celebration added Fri Nov 6, 2026 6:00-8:00 PM PT at C. Robert Lee Activity Center, 21815 Pioneer Blvd, verified from eleon@hgcity.org email Oct 6, 2026 and hgcity.org, with official city flyer img/flyers/veterans-day-2026.png/.pdf. Jordan working the Post added Sun Oct 18, 2026 (date-only, hours not given — time TBD, America/Los_Angeles), with a 1-day-before in-app reminder banner. Rams promo added: Football Sunday Oct 18, 2026, Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey, with flyer img/flyers/rams-halftime-jello-2026-10-18.png/.pdf and a 1-day-before in-app reminder banner.",
  "events": [
   {
    "id": "membership",
@@ -154,12 +154,14 @@
    "category": "NFL",
    "start": "2026-10-18T13:05",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Arizona Cardinals vs Los Angeles Rams on Sun Oct 18, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game. Arizona Cardinals vs Los Angeles Rams on Sun Oct 18, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule. Football Sunday special: Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey. Flyer: img/flyers/rams-halftime-jello-2026-10-18.png (PDF: img/flyers/rams-halftime-jello-2026-10-18.pdf).",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Arizona%20Cardinals%20vs%20Los%20Angeles%20Rams%20-%20Watch%20at%20the%20Post",
    "test": false,
    "espn_id": "401873004",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018",
+   "flyer": "img/flyers/rams-halftime-jello-2026-10-18.png",
+   "flyerPdf": "img/flyers/rams-halftime-jello-2026-10-18.pdf"
   },
   {
    "id": "nfl-401873006",
@@ -1318,6 +1320,11 @@
    "eventId": "jordan-working-post-2026-10-18",
    "remindDaysBefore": 1,
    "text": "Jordan working the Post tomorrow: {date} at The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Hours: time TBD — details coming soon."
+  },
+  {
+   "eventId": "nfl-401873004",
+   "remindDaysBefore": 1,
+   "text": "Football Sunday Oct 18: Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey. Rams game at 1:05 PM PT at the Post, Arizona Cardinals vs Los Angeles Rams. Watch at VFW Post 7243."
   }
  ],
  "potluckSample": [],
