@@ -40,9 +40,11 @@
    "timeTbd": true,
    "timezone": "America/Los_Angeles",
    "location": "The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "Jordan working the Post on Sun Oct 18, 2026. Hours were not given, so no start/end time is listed — time TBD, details coming soon. All times America/Los_Angeles.",
+   "description": "Jordan working the Post on Sun Oct 18, 2026. Hours were not given, so no start/end time is listed — time TBD, details coming soon. All times America/Los_Angeles. Flyer: img/flyers/jordan-sunday-football-2026-10-18.png (PDF: img/flyers/jordan-sunday-football-2026-10-18.pdf).",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=Jordan%20working%20the%20Post%20Oct%2018",
-   "test": false
+   "test": false,
+   "flyer": "img/flyers/jordan-sunday-football-2026-10-18.png",
+   "flyerPdf": "img/flyers/jordan-sunday-football-2026-10-18.pdf"
   },
   {
    "id": "nfl-401872996",

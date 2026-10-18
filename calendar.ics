@@ -1506,4 +1506,17 @@ DESCRIPTION:NFL game. Los Angeles Chargers vs Baltimore Ravens on Mon Nov 1
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:jordan-working-post-2026-10-18@vfw7243.local
+DTSTAMP:20261017T173000Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+SUMMARY:Jordan working the Post
+LOCATION:The Hall\, VFW Post 7243\, 12064 Centralia Rd\, Hawaiian Gardens\, CA 90716
+ATTACH;FMTTYPE=image/png:img/flyers/jordan-sunday-football-2026-10-18.png
+ATTACH;FMTTYPE=application/pdf:img/flyers/jordan-sunday-football-2026-10-18.pdf
+DESCRIPTION:Jordan working the Post on Sun Oct 18\, 2026. Sunday Football at the Post\, games all day. Hours were not given\, so no start/end time is listed, time TBD\, details coming soon. All times America/Los_Angeles. Flyer: img/flyers/jordan-sunday-football-2026-10-18.png (PDF: img/flyers/jordan-sunday-football-2026-10-18.pdf).
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
