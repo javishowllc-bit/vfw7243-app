@@ -3,7 +3,7 @@
 <div class="soon">Authorized posters: Javier, Bino, Shane. Nothing is published or sent without Javier's approval. This page only edits a copy on this device and exports a file; it does not publish.</div>
 <form id="f"><label>Title<input name="title" required></label><label>Category<select name="category"><option>Games</option><option>City Event</option><option>Comedy Show</option></select></label>
 <label>Start<input name="start" type="datetime-local" required></label><label>Door time<input name="doors" type="time"></label><label>Price<input name="price" placeholder="Free, $10, TBD"></label>
-<label>Flyer image path<input name="flyer" placeholder="img/flyer.png"></label><label>RSVP link<input name="rsvp" value="mailto:VFW7243@yahoo.com"></label><label>Info or donation link (for QR)<input name="info"></label>
+<label>Flyer image path<input name="flyer" placeholder="img/flyer.png"></label><label>RSVP link (only used if RSVP enabled)<input name="rsvp" value="mailto:VFW7243@yahoo.com"></label><label><input type="checkbox" name="rsvpEnabled"> RSVP enabled — ticketed events only, per event</label><label>Info or donation link (for QR)<input name="info"></label>
 <label>Description<textarea name="description"></textarea></label><button class="big">Add / Update Event</button></form>
 <div id="l"></div><button class="big alt" id="x">Export events.json</button>
 <p class="note">After export, send the file to Javier for approval. A new QR image (qr/ID.svg) must be generated for each new link before publishing.</p></main>
@@ -14,7 +14,7 @@ function s(){localStorage.setItem('draft',JSON.stringify(d))}
 function r(){l.innerHTML=d.events.map((e,i)=>`<div class="past"><div style="flex:1"><b></b><br><span class="small"></span></div><button data-i="${i}">Delete</button></div>`).join('');
  l.querySelectorAll('.past').forEach((p,i)=>{p.querySelector('b').textContent=d.events[i].title;p.querySelector('span').textContent=d.events[i].start});
  l.querySelectorAll('button').forEach(b=>b.onclick=()=>{d.events.splice(+b.dataset.i,1);s();r()})}
-document.getElementById('f').onsubmit=e=>{e.preventDefault();const o=Object.fromEntries(new FormData(e.target));o.id='e'+Date.now();o.qr='qr/'+o.id+'.svg';o.sample=false;
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const o=Object.fromEntries(new FormData(e.target));o.rsvpEnabled=o.rsvpEnabled==='on';o.id='e'+Date.now();o.qr='qr/'+o.id+'.svg';o.sample=false;
  const k=d.events.findIndex(x=>x.title==o.title);if(k>=0)d.events[k]={...d.events[k],...o,id:d.events[k].id,qr:d.events[k].qr};else d.events.push(o);s();r();e.target.reset()};
 document.getElementById('x').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(d,null,1)],{type:'application/json'}));a.download='events.json';a.click()};
 </script></body></html>
