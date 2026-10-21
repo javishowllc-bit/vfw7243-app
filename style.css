@@ -35,3 +35,18 @@ header{position:relative}.donate{position:absolute;right:10px;top:12px;backgroun
 .firstpop-card{background:#fff;border:2px solid var(--n);border-radius:12px;padding:18px;text-align:center}
 .firstpop-card h3{color:var(--n);margin:8px 0;font-size:22px}
 .firstpop-kicker{color:var(--r);font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:1px}
+
+/* iPhone/Android safe areas and tap targets */
+header{padding-top:calc(14px + env(safe-area-inset-top))}.donate{top:calc(12px + env(safe-area-inset-top))}main{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}button,.big,nav button,.seg button{min-height:44px}a{-webkit-tap-highlight-color:rgba(0,0,0,.15)}
+
+/* Month calendar v19 */
+.todaybar{background:#fff7d6;border-left:5px solid var(--r);padding:10px 12px;border-radius:8px;margin:8px 0;font-size:15px;line-height:1.4;cursor:pointer}
+.mnav{display:flex;align-items:center;justify-content:space-between}.mnav h3{margin:0}.mnav button{min-width:48px;min-height:48px;font-size:30px;border:0;background:var(--n);color:#fff;border-radius:10px}
+#evgrid .g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-top:8px}#evgrid .g .h{text-align:center;font-weight:700;font-size:13px;color:#555}
+#evgrid .g .d{min-height:62px;padding:3px 1px;border-radius:8px;background:#f4f5f8;display:flex;flex-direction:column;align-items:center;gap:2px;font:inherit;color:#222;border:2px solid transparent}
+#evgrid .g button.d{cursor:pointer;background:#fff;border-color:#1B2A4A33}#evgrid .g .d.today{border-color:var(--r);background:#fff1f1}
+.dn{font-size:13px;font-weight:700}.hl{font-size:10px;line-height:1.1;text-align:center;word-break:break-word;max-width:100%}
+.ico{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff}img.ico{object-fit:contain}
+.ico.star{background:var(--r);font-size:15px}.ico.post{background:var(--n);font-size:13px}.ico.nfl{background:#013369}.ico.nba{background:#552583}.ico.mlb{background:#005A9C}
+#daySheet{width:min(94vw,520px);max-height:88vh;overflow:auto;border:0;border-radius:16px;padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom))}#daySheet::backdrop{background:rgba(0,0,0,.5)}
+.sheet-ev{border-top:1px solid #ddd;padding:8px 0}.sheet-ev img{width:100%;border-radius:8px}.sheet-ev h4{margin:6px 0;color:var(--n)}.sheet-date{margin:0 0 6px;color:var(--r)}

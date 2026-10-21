@@ -1,6 +1,5 @@
 {
  "updated": "2026-10-17",
- "note": "Membership Meeting is real (first Saturday monthly 11 AM PT). Sports watch events Oct 17 to Nov 16, 2026 added as Watch at the Post promos, times in America/Los_Angeles verified from ESPN schedules on Oct 17, 2026. Covers all Lakers games, all NFL games, and all remaining MLB postseason games in window. Dodgers and Angels have no games in this window (Dodgers postseason ended Oct 15, Angels regular season ended Sep 27). World Series opponent listed as Rays/Guardians winner per ESPN placeholder on Oct 17. No test events. Veterans Day: City of Hawaiian Gardens Veterans Day Celebration added Fri Nov 6, 2026 6:00-8:00 PM PT at C. Robert Lee Activity Center, 21815 Pioneer Blvd, verified from eleon@hgcity.org email Oct 6, 2026 and hgcity.org, with official city flyer img/flyers/veterans-day-2026.png/.pdf. Jordan working the Post added Sun Oct 18, 2026 (date-only, hours not given — time TBD, America/Los_Angeles), with a 1-day-before in-app reminder banner. Rams promo added: Football Sunday Oct 18, 2026, Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey, with flyer img/flyers/rams-halftime-jello-2026-10-18.png/.pdf and a 1-day-before in-app reminder banner. Rams promo in-app reminder banner is timed for Sat Oct 17, 2026 at 8:00 PM America/Los_Angeles (notifyAt on the reminder), through the Oct 18 1:05 PM PT game start. RSVP is per-event opt-in only (Javier rule Oct 17, 2026): RSVP shows ONLY when an event has \"rsvpEnabled\": true, mainly for ticketed events Javier/the Post explicitly flag. It is false for all 98 current events (no ticket sales stated for any, including Veterans Day and Membership Meeting). To turn RSVP on for a future ticketed event, change that one event's rsvpEnabled to true — its existing rsvp mailto (subject already names the event) then renders, and its price field, if any, still shows. Do not invent prices or payment links. Veterans Day event now shows the VFW Post 7243 flyer (img/flyers/vfw-post7243-veterans-day-2026-11-06.png/.pdf) as its main flyer; the official city flyer remains linked on the event as cityFlyer/cityFlyerPdf.",
  "events": [
   {
    "id": "membership",
@@ -16,8 +15,7 @@
    "test": false,
    "end": "12:00",
    "zoomMeetingId": "833 9862 6639",
-   "zoomPasscode": "iTa4Mj",
-   "zoomSource": "Created Oct 18, 2026 in Javier Ortiz's Zoom account (signed in with Apple): recurring monthly meeting, first Saturday, 11:00 AM-12:00 PM America/Los_Angeles, set in Zoom as Every month on the First Sat. Replaces the unconfirmed one-off link from Shadic Anderson (June 24, 2026, meeting 847 8733 2306). Not yet verified by a test join."
+   "zoomPasscode": "iTa4Mj"
   },
   {
    "id": "mlb-401908027",
@@ -25,13 +23,12 @@
    "category": "MLB Postseason",
    "start": "2026-10-17T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB game. Tampa Bay Rays vs Cleveland Guardians on Sat Oct 17, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "MLB game: Tampa Bay Rays vs Cleveland Guardians. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Tampa%20Bay%20Rays%20vs%20Cleveland%20Guardians%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908027",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261017"
+   "espn_id": "401908027"
   },
   {
    "id": "jordan-working-post-2026-10-18",
@@ -42,7 +39,7 @@
    "timeTbd": true,
    "timezone": "America/Los_Angeles",
    "location": "The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "Jordan working the Post on Sun Oct 18, 2026. Hours were not given, so no start/end time is listed — time TBD, details coming soon. All times America/Los_Angeles. Flyer: img/flyers/jordan-sunday-football-2026-10-18.png (PDF: img/flyers/jordan-sunday-football-2026-10-18.pdf).",
+   "description": "Jordan working the Post for Sunday Football. Games all day.",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=Jordan%20working%20the%20Post%20Oct%2018",
    "rsvpEnabled": false,
    "test": false,
@@ -55,13 +52,12 @@
    "category": "NFL",
    "start": "2026-10-18T06:30",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Houston Texans vs Jacksonville Jaguars on Sun Oct 18, 2026 at 6:30 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Houston Texans vs Jacksonville Jaguars. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Houston%20Texans%20vs%20Jacksonville%20Jaguars%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401872996",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401872996"
   },
   {
    "id": "nfl-401872999",
@@ -69,13 +65,12 @@
    "category": "NFL",
    "start": "2026-10-18T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Chicago Bears vs Atlanta Falcons on Sun Oct 18, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Chicago Bears vs Atlanta Falcons. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Chicago%20Bears%20vs%20Atlanta%20Falcons%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401872999",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401872999"
   },
   {
    "id": "nfl-401872997",
@@ -83,13 +78,12 @@
    "category": "NFL",
    "start": "2026-10-18T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Baltimore Ravens vs Cleveland Browns on Sun Oct 18, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Baltimore Ravens vs Cleveland Browns. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Baltimore%20Ravens%20vs%20Cleveland%20Browns%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401872997",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401872997"
   },
   {
    "id": "nfl-401873003",
@@ -97,13 +91,12 @@
    "category": "NFL",
    "start": "2026-10-18T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Tennessee Titans vs Indianapolis Colts on Sun Oct 18, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Tennessee Titans vs Indianapolis Colts. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Tennessee%20Titans%20vs%20Indianapolis%20Colts%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873003",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401873003"
   },
   {
    "id": "nfl-401873001",
@@ -111,13 +104,12 @@
    "category": "NFL",
    "start": "2026-10-18T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. New York Jets vs New England Patriots on Sun Oct 18, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: New York Jets vs New England Patriots. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20New%20York%20Jets%20vs%20New%20England%20Patriots%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873001",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401873001"
   },
   {
    "id": "nfl-401873000",
@@ -125,13 +117,12 @@
    "category": "NFL",
    "start": "2026-10-18T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. New Orleans Saints vs New York Giants on Sun Oct 18, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: New Orleans Saints vs New York Giants. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20New%20Orleans%20Saints%20vs%20New%20York%20Giants%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873000",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401873000"
   },
   {
    "id": "nfl-401872998",
@@ -139,13 +130,12 @@
    "category": "NFL",
    "start": "2026-10-18T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Carolina Panthers vs Philadelphia Eagles on Sun Oct 18, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Carolina Panthers vs Philadelphia Eagles. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Carolina%20Panthers%20vs%20Philadelphia%20Eagles%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401872998",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401872998"
   },
   {
    "id": "nfl-401873002",
@@ -153,13 +143,12 @@
    "category": "NFL",
    "start": "2026-10-18T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Pittsburgh Steelers vs Tampa Bay Buccaneers on Sun Oct 18, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Pittsburgh Steelers vs Tampa Bay Buccaneers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Pittsburgh%20Steelers%20vs%20Tampa%20Bay%20Buccaneers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873002",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401873002"
   },
   {
    "id": "nfl-401873004",
@@ -167,13 +156,12 @@
    "category": "NFL",
    "start": "2026-10-18T13:05",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Arizona Cardinals vs Los Angeles Rams on Sun Oct 18, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule. Football Sunday special: Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey. Flyer: img/flyers/rams-halftime-jello-2026-10-18.png (PDF: img/flyers/rams-halftime-jello-2026-10-18.pdf).",
+   "description": "NFL game: Arizona Cardinals vs Los Angeles Rams. Watch at the Post. Football Sunday special: Rams fans get 1/2 off a Jello shot at halftime with a Rams jersey.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Arizona%20Cardinals%20vs%20Los%20Angeles%20Rams%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
    "espn_id": "401873004",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018",
    "flyer": "img/flyers/rams-halftime-jello-2026-10-18.png",
    "flyerPdf": "img/flyers/rams-halftime-jello-2026-10-18.pdf"
   },
@@ -183,13 +171,12 @@
    "category": "NFL",
    "start": "2026-10-18T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Los Angeles Chargers vs Kansas City Chiefs on Sun Oct 18, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Los Angeles Chargers vs Kansas City Chiefs. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Chargers%20vs%20Kansas%20City%20Chiefs%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873006",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401873006"
   },
   {
    "id": "nfl-401873005",
@@ -197,13 +184,12 @@
    "category": "NFL",
    "start": "2026-10-18T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Buffalo Bills vs Las Vegas Raiders on Sun Oct 18, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Buffalo Bills vs Las Vegas Raiders. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Buffalo%20Bills%20vs%20Las%20Vegas%20Raiders%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873005",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401873005"
   },
   {
    "id": "mlb-401930515",
@@ -211,13 +197,12 @@
    "category": "MLB Postseason",
    "start": "2026-10-18T14:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB game. Tampa Bay Rays vs Cleveland Guardians on Sun Oct 18, 2026 at 2:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "MLB game: Tampa Bay Rays vs Cleveland Guardians. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Tampa%20Bay%20Rays%20vs%20Cleveland%20Guardians%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401930515",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261018"
+   "espn_id": "401930515"
   },
   {
    "id": "nfl-401873007",
@@ -225,13 +210,12 @@
    "category": "NFL",
    "start": "2026-10-18T17:20",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Dallas Cowboys vs Green Bay Packers on Sun Oct 18, 2026 at 5:20 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Dallas Cowboys vs Green Bay Packers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Dallas%20Cowboys%20vs%20Green%20Bay%20Packers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873007",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261018"
+   "espn_id": "401873007"
   },
   {
    "id": "mlb-401908028",
@@ -239,13 +223,12 @@
    "category": "MLB Postseason",
    "start": "2026-10-19T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB game. Cleveland Guardians vs Tampa Bay Rays on Mon Oct 19, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "MLB game: Cleveland Guardians vs Tampa Bay Rays. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Cleveland%20Guardians%20vs%20Tampa%20Bay%20Rays%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908028",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261019"
+   "espn_id": "401908028"
   },
   {
    "id": "nfl-401873008",
@@ -253,13 +236,12 @@
    "category": "NFL",
    "start": "2026-10-19T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Washington Commanders vs San Francisco 49ers on Mon Oct 19, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Washington Commanders vs San Francisco 49ers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Washington%20Commanders%20vs%20San%20Francisco%2049ers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873008",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261019"
+   "espn_id": "401873008"
   },
   {
    "id": "mlb-401908029",
@@ -267,13 +249,12 @@
    "category": "MLB Postseason",
    "start": "2026-10-20T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB game. Cleveland Guardians vs Tampa Bay Rays on Tue Oct 20, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "MLB game: Cleveland Guardians vs Tampa Bay Rays. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Cleveland%20Guardians%20vs%20Tampa%20Bay%20Rays%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908029",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261020"
+   "espn_id": "401908029"
   },
   {
    "id": "nba-401909092",
@@ -281,13 +262,12 @@
    "category": "NBA",
    "start": "2026-10-21T19:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Golden State Warriors vs Los Angeles Lakers on Wed Oct 21, 2026 at 7:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Golden State Warriors vs Los Angeles Lakers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Golden%20State%20Warriors%20vs%20Los%20Angeles%20Lakers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909092",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909092"
   },
   {
    "id": "nfl-401873010",
@@ -295,27 +275,25 @@
    "category": "NFL",
    "start": "2026-10-22T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. New England Patriots vs Chicago Bears on Thu Oct 22, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: New England Patriots vs Chicago Bears. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20New%20England%20Patriots%20vs%20Chicago%20Bears%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873010",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261022"
+   "espn_id": "401873010"
   },
   {
    "id": "mlb-401908042",
-   "title": "World Series Game 1: Milwaukee Brewers vs Rays/Guardians winner - Watch at the Post",
+   "title": "World Series Game 1: Tampa Bay Rays vs Milwaukee Brewers - Watch at the Post",
    "category": "MLB World Series",
    "start": "2026-10-23T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB World Series Game 1. Milwaukee Brewers vs winner of Tampa Bay Rays vs Cleveland Guardians, on Fri Oct 23, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Matchup placeholder is as listed by ESPN on Oct 17, 2026, opponent to be confirmed when ALCS ends. Start time verified from ESPN schedule.",
+   "description": "MLB World Series Game 1: Tampa Bay Rays vs Milwaukee Brewers. First pitch 5:00 PM. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Rays/Guardians%20vs%20Milwaukee%20Brewers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908042",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261023"
+   "espn_id": "401908042"
   },
   {
    "id": "nba-401909851",
@@ -323,27 +301,25 @@
    "category": "NBA",
    "start": "2026-10-23T19:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. LA Clippers vs Los Angeles Lakers on Fri Oct 23, 2026 at 7:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: LA Clippers vs Los Angeles Lakers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20LA%20Clippers%20vs%20Los%20Angeles%20Lakers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909851",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909851"
   },
   {
    "id": "mlb-401908043",
-   "title": "World Series Game 2: Milwaukee Brewers vs Rays/Guardians winner - Watch at the Post",
+   "title": "World Series Game 2: Tampa Bay Rays vs Milwaukee Brewers - Watch at the Post",
    "category": "MLB World Series",
    "start": "2026-10-24T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB World Series Game 2. Milwaukee Brewers vs winner of Tampa Bay Rays vs Cleveland Guardians, on Sat Oct 24, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Matchup placeholder is as listed by ESPN on Oct 17, 2026, opponent to be confirmed when ALCS ends. Start time verified from ESPN schedule.",
+   "description": "MLB World Series Game 2: Tampa Bay Rays vs Milwaukee Brewers. First pitch 5:00 PM. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Rays/Guardians%20vs%20Milwaukee%20Brewers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908043",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261024"
+   "espn_id": "401908043"
   },
   {
    "id": "nfl-401873011",
@@ -351,13 +327,12 @@
    "category": "NFL",
    "start": "2026-10-25T06:30",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Pittsburgh Steelers vs New Orleans Saints on Sun Oct 25, 2026 at 6:30 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Pittsburgh Steelers vs New Orleans Saints. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Pittsburgh%20Steelers%20vs%20New%20Orleans%20Saints%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873011",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873011"
   },
   {
    "id": "nfl-401873017",
@@ -365,13 +340,12 @@
    "category": "NFL",
    "start": "2026-10-25T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. San Francisco 49ers vs Atlanta Falcons on Sun Oct 25, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: San Francisco 49ers vs Atlanta Falcons. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20San%20Francisco%2049ers%20vs%20Atlanta%20Falcons%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873017",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873017"
   },
   {
    "id": "nfl-401873013",
@@ -379,13 +353,12 @@
    "category": "NFL",
    "start": "2026-10-25T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Cleveland Browns vs Tennessee Titans on Sun Oct 25, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Cleveland Browns vs Tennessee Titans. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Cleveland%20Browns%20vs%20Tennessee%20Titans%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873013",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873013"
   },
   {
    "id": "nfl-401873014",
@@ -393,13 +366,12 @@
    "category": "NFL",
    "start": "2026-10-25T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Indianapolis Colts vs Minnesota Vikings on Sun Oct 25, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Indianapolis Colts vs Minnesota Vikings. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Indianapolis%20Colts%20vs%20Minnesota%20Vikings%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873014",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873014"
   },
   {
    "id": "nfl-401873015",
@@ -407,13 +379,12 @@
    "category": "NFL",
    "start": "2026-10-25T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Miami Dolphins vs New York Jets on Sun Oct 25, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Miami Dolphins vs New York Jets. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Miami%20Dolphins%20vs%20New%20York%20Jets%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873015",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873015"
   },
   {
    "id": "nfl-401873018",
@@ -421,13 +392,12 @@
    "category": "NFL",
    "start": "2026-10-25T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Tampa Bay Buccaneers vs Carolina Panthers on Sun Oct 25, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Tampa Bay Buccaneers vs Carolina Panthers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Tampa%20Bay%20Buccaneers%20vs%20Carolina%20Panthers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873018",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873018"
   },
   {
    "id": "nfl-401873012",
@@ -435,13 +405,12 @@
    "category": "NFL",
    "start": "2026-10-25T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Cincinnati Bengals vs Baltimore Ravens on Sun Oct 25, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Cincinnati Bengals vs Baltimore Ravens. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Cincinnati%20Bengals%20vs%20Baltimore%20Ravens%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873012",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873012"
   },
   {
    "id": "nfl-401873016",
@@ -449,13 +418,12 @@
    "category": "NFL",
    "start": "2026-10-25T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. New York Giants vs Houston Texans on Sun Oct 25, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: New York Giants vs Houston Texans. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20New%20York%20Giants%20vs%20Houston%20Texans%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873016",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873016"
   },
   {
    "id": "nfl-401873019",
@@ -463,13 +431,12 @@
    "category": "NFL",
    "start": "2026-10-25T13:05",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Denver Broncos vs Arizona Cardinals on Sun Oct 25, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Denver Broncos vs Arizona Cardinals. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Denver%20Broncos%20vs%20Arizona%20Cardinals%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873019",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873019"
   },
   {
    "id": "nfl-401873020",
@@ -477,13 +444,12 @@
    "category": "NFL",
    "start": "2026-10-25T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Green Bay Packers vs Detroit Lions on Sun Oct 25, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Green Bay Packers vs Detroit Lions. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Green%20Bay%20Packers%20vs%20Detroit%20Lions%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873020",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873020"
   },
   {
    "id": "nfl-401873021",
@@ -491,13 +457,12 @@
    "category": "NFL",
    "start": "2026-10-25T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Los Angeles Rams vs Las Vegas Raiders on Sun Oct 25, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Los Angeles Rams vs Las Vegas Raiders. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Rams%20vs%20Las%20Vegas%20Raiders%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873021",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873021"
   },
   {
    "id": "nba-401909861",
@@ -505,13 +470,12 @@
    "category": "NBA",
    "start": "2026-10-25T14:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Los Angeles Lakers vs Utah Jazz on Sun Oct 25, 2026 at 2:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Los Angeles Lakers vs Utah Jazz. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Lakers%20vs%20Utah%20Jazz%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909861",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909861"
   },
   {
    "id": "nfl-401873022",
@@ -519,27 +483,25 @@
    "category": "NFL",
    "start": "2026-10-25T17:20",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Kansas City Chiefs vs Seattle Seahawks on Sun Oct 25, 2026 at 5:20 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Kansas City Chiefs vs Seattle Seahawks. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Kansas%20City%20Chiefs%20vs%20Seattle%20Seahawks%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873022",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261025"
+   "espn_id": "401873022"
   },
   {
    "id": "mlb-401908044",
-   "title": "World Series Game 3: Milwaukee Brewers vs Rays/Guardians winner - Watch at the Post",
+   "title": "World Series Game 3: Tampa Bay Rays vs Milwaukee Brewers - Watch at the Post",
    "category": "MLB World Series",
    "start": "2026-10-26T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB World Series Game 3. Milwaukee Brewers vs winner of Tampa Bay Rays vs Cleveland Guardians, on Mon Oct 26, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Matchup placeholder is as listed by ESPN on Oct 17, 2026, opponent to be confirmed when ALCS ends. Start time verified from ESPN schedule.",
+   "description": "MLB World Series Game 3: Tampa Bay Rays vs Milwaukee Brewers. First pitch 5:00 PM. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Milwaukee%20Brewers%20vs%20Rays/Guardians%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908044",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261026"
+   "espn_id": "401908044"
   },
   {
    "id": "nfl-401873009",
@@ -547,27 +509,25 @@
    "category": "NFL",
    "start": "2026-10-26T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Dallas Cowboys vs Philadelphia Eagles on Mon Oct 26, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Dallas Cowboys vs Philadelphia Eagles. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Dallas%20Cowboys%20vs%20Philadelphia%20Eagles%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873009",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261026"
+   "espn_id": "401873009"
   },
   {
    "id": "mlb-401908045",
-   "title": "World Series Game 4: Milwaukee Brewers vs Rays/Guardians winner - Watch at the Post",
+   "title": "World Series Game 4: Tampa Bay Rays vs Milwaukee Brewers - Watch at the Post",
    "category": "MLB World Series",
    "start": "2026-10-27T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB World Series Game 4. Milwaukee Brewers vs winner of Tampa Bay Rays vs Cleveland Guardians, on Tue Oct 27, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Matchup placeholder is as listed by ESPN on Oct 17, 2026, opponent to be confirmed when ALCS ends. Start time verified from ESPN schedule.",
+   "description": "MLB World Series Game 4: Tampa Bay Rays vs Milwaukee Brewers. First pitch 5:00 PM. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Milwaukee%20Brewers%20vs%20Rays/Guardians%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908045",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261027"
+   "espn_id": "401908045"
   },
   {
    "id": "nba-401909880",
@@ -575,27 +535,25 @@
    "category": "NBA",
    "start": "2026-10-27T20:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Portland Trail Blazers vs Los Angeles Lakers on Tue Oct 27, 2026 at 8:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Portland Trail Blazers vs Los Angeles Lakers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Portland%20Trail%20Blazers%20vs%20Los%20Angeles%20Lakers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909880",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909880"
   },
   {
    "id": "mlb-401908046",
-   "title": "World Series Game 5: Milwaukee Brewers vs Rays/Guardians winner - Watch at the Post",
+   "title": "World Series Game 5: Tampa Bay Rays vs Milwaukee Brewers - Watch at the Post",
    "category": "MLB World Series",
    "start": "2026-10-28T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB World Series Game 5 (if necessary). Milwaukee Brewers vs winner of Tampa Bay Rays vs Cleveland Guardians, on Wed Oct 28, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Matchup placeholder is as listed by ESPN on Oct 17, 2026, opponent to be confirmed when ALCS ends. Start time verified from ESPN schedule.",
+   "description": "MLB World Series Game 5 (if necessary): Tampa Bay Rays vs Milwaukee Brewers. First pitch 5:00 PM. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Milwaukee%20Brewers%20vs%20Rays/Guardians%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908046",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261028"
+   "espn_id": "401908046"
   },
   {
    "id": "nba-401909892",
@@ -603,13 +561,12 @@
    "category": "NBA",
    "start": "2026-10-28T19:30",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Los Angeles Lakers vs LA Clippers on Wed Oct 28, 2026 at 7:30 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Los Angeles Lakers vs LA Clippers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Lakers%20vs%20LA%20Clippers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909892",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909892"
   },
   {
    "id": "nfl-401873023",
@@ -617,27 +574,25 @@
    "category": "NFL",
    "start": "2026-10-29T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Carolina Panthers vs Green Bay Packers on Thu Oct 29, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Carolina Panthers vs Green Bay Packers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Carolina%20Panthers%20vs%20Green%20Bay%20Packers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873023",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261029"
+   "espn_id": "401873023"
   },
   {
    "id": "mlb-401908047",
-   "title": "World Series Game 6: Milwaukee Brewers vs Rays/Guardians winner - Watch at the Post",
+   "title": "World Series Game 6: Tampa Bay Rays vs Milwaukee Brewers - Watch at the Post",
    "category": "MLB World Series",
    "start": "2026-10-30T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB World Series Game 6 (if necessary). Milwaukee Brewers vs winner of Tampa Bay Rays vs Cleveland Guardians, on Fri Oct 30, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Matchup placeholder is as listed by ESPN on Oct 17, 2026, opponent to be confirmed when ALCS ends. Start time verified from ESPN schedule.",
+   "description": "MLB World Series Game 6 (if necessary): Tampa Bay Rays vs Milwaukee Brewers. First pitch 5:00 PM. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Rays/Guardians%20vs%20Milwaukee%20Brewers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908047",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261030"
+   "espn_id": "401908047"
   },
   {
    "id": "nba-401909285",
@@ -645,27 +600,25 @@
    "category": "NBA",
    "start": "2026-10-30T19:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Los Angeles Lakers vs Golden State Warriors on Fri Oct 30, 2026 at 7:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Los Angeles Lakers vs Golden State Warriors. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Lakers%20vs%20Golden%20State%20Warriors%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909285",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909285"
   },
   {
    "id": "mlb-401908048",
-   "title": "World Series Game 7: Milwaukee Brewers vs Rays/Guardians winner - Watch at the Post",
+   "title": "World Series Game 7: Tampa Bay Rays vs Milwaukee Brewers - Watch at the Post",
    "category": "MLB World Series",
    "start": "2026-10-31T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "MLB World Series Game 7 (if necessary). Milwaukee Brewers vs winner of Tampa Bay Rays vs Cleveland Guardians, on Sat Oct 31, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Matchup placeholder is as listed by ESPN on Oct 17, 2026, opponent to be confirmed when ALCS ends. Start time verified from ESPN schedule.",
+   "description": "MLB World Series Game 7 (if necessary): Tampa Bay Rays vs Milwaukee Brewers. First pitch 5:00 PM. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Rays/Guardians%20vs%20Milwaukee%20Brewers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401908048",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261031"
+   "espn_id": "401908048"
   },
   {
    "id": "nfl-401873026",
@@ -673,13 +626,12 @@
    "category": "NFL",
    "start": "2026-11-01T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Baltimore Ravens vs Buffalo Bills on Sun Nov 01, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Baltimore Ravens vs Buffalo Bills. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Baltimore%20Ravens%20vs%20Buffalo%20Bills%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873026",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873026"
   },
   {
    "id": "nfl-401873031",
@@ -687,13 +639,12 @@
    "category": "NFL",
    "start": "2026-11-01T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Tennessee Titans vs Cincinnati Bengals on Sun Nov 01, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Tennessee Titans vs Cincinnati Bengals. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Tennessee%20Titans%20vs%20Cincinnati%20Bengals%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873031",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873031"
   },
   {
    "id": "nfl-401873024",
@@ -701,13 +652,12 @@
    "category": "NFL",
    "start": "2026-11-01T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Arizona Cardinals vs Dallas Cowboys on Sun Nov 01, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Arizona Cardinals vs Dallas Cowboys. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Arizona%20Cardinals%20vs%20Dallas%20Cowboys%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873024",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873024"
   },
   {
    "id": "nfl-401873030",
@@ -715,13 +665,12 @@
    "category": "NFL",
    "start": "2026-11-01T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Minnesota Vikings vs Detroit Lions on Sun Nov 01, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Minnesota Vikings vs Detroit Lions. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Minnesota%20Vikings%20vs%20Detroit%20Lions%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873030",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873030"
   },
   {
    "id": "nfl-401873029",
@@ -729,13 +678,12 @@
    "category": "NFL",
    "start": "2026-11-01T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Las Vegas Raiders vs New York Jets on Sun Nov 01, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Las Vegas Raiders vs New York Jets. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Las%20Vegas%20Raiders%20vs%20New%20York%20Jets%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873029",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873029"
   },
   {
    "id": "nfl-401873027",
@@ -743,13 +691,12 @@
    "category": "NFL",
    "start": "2026-11-01T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Cleveland Browns vs Pittsburgh Steelers on Sun Nov 01, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Cleveland Browns vs Pittsburgh Steelers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Cleveland%20Browns%20vs%20Pittsburgh%20Steelers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873027",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873027"
   },
   {
    "id": "nfl-401873025",
@@ -757,13 +704,12 @@
    "category": "NFL",
    "start": "2026-11-01T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Atlanta Falcons vs Tampa Bay Buccaneers on Sun Nov 01, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Atlanta Falcons vs Tampa Bay Buccaneers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Atlanta%20Falcons%20vs%20Tampa%20Bay%20Buccaneers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873025",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873025"
   },
   {
    "id": "nfl-401873028",
@@ -771,13 +717,12 @@
    "category": "NFL",
    "start": "2026-11-01T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Indianapolis Colts vs Jacksonville Jaguars on Sun Nov 01, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Indianapolis Colts vs Jacksonville Jaguars. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Indianapolis%20Colts%20vs%20Jacksonville%20Jaguars%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873028",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873028"
   },
   {
    "id": "nfl-401873032",
@@ -785,13 +730,12 @@
    "category": "NFL",
    "start": "2026-11-01T13:05",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Los Angeles Chargers vs Los Angeles Rams on Sun Nov 01, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Los Angeles Chargers vs Los Angeles Rams. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Chargers%20vs%20Los%20Angeles%20Rams%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873032",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873032"
   },
   {
    "id": "nfl-401873033",
@@ -799,13 +743,12 @@
    "category": "NFL",
    "start": "2026-11-01T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Kansas City Chiefs vs Denver Broncos on Sun Nov 01, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Kansas City Chiefs vs Denver Broncos. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Kansas%20City%20Chiefs%20vs%20Denver%20Broncos%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873033",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873033"
   },
   {
    "id": "nfl-401873034",
@@ -813,13 +756,12 @@
    "category": "NFL",
    "start": "2026-11-01T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. New England Patriots vs Miami Dolphins on Sun Nov 01, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: New England Patriots vs Miami Dolphins. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20New%20England%20Patriots%20vs%20Miami%20Dolphins%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873034",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873034"
   },
   {
    "id": "nfl-401873035",
@@ -827,13 +769,12 @@
    "category": "NFL",
    "start": "2026-11-01T17:20",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Philadelphia Eagles vs Washington Commanders on Sun Nov 01, 2026 at 5:20 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Philadelphia Eagles vs Washington Commanders. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Philadelphia%20Eagles%20vs%20Washington%20Commanders%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873035",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101"
+   "espn_id": "401873035"
   },
   {
    "id": "nba-401909906",
@@ -841,13 +782,12 @@
    "category": "NBA",
    "start": "2026-11-01T18:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Toronto Raptors vs Los Angeles Lakers on Sun Nov 01, 2026 at 6:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Toronto Raptors vs Los Angeles Lakers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Toronto%20Raptors%20vs%20Los%20Angeles%20Lakers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909906",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909906"
   },
   {
    "id": "nfl-401873036",
@@ -855,13 +795,12 @@
    "category": "NFL",
    "start": "2026-11-02T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Chicago Bears vs Seattle Seahawks on Mon Nov 02, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Chicago Bears vs Seattle Seahawks. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Chicago%20Bears%20vs%20Seattle%20Seahawks%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873036",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261102"
+   "espn_id": "401873036"
   },
   {
    "id": "nba-401909921",
@@ -869,13 +808,12 @@
    "category": "NBA",
    "start": "2026-11-02T19:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Miami Heat vs Los Angeles Lakers on Mon Nov 02, 2026 at 7:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Miami Heat vs Los Angeles Lakers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Miami%20Heat%20vs%20Los%20Angeles%20Lakers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909921",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909921"
   },
   {
    "id": "nba-401909934",
@@ -883,13 +821,12 @@
    "category": "NBA",
    "start": "2026-11-04T19:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Los Angeles Lakers vs Sacramento Kings on Wed Nov 04, 2026 at 7:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Los Angeles Lakers vs Sacramento Kings. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Lakers%20vs%20Sacramento%20Kings%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909934",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909934"
   },
   {
    "id": "nfl-401873037",
@@ -897,13 +834,12 @@
    "category": "NFL",
    "start": "2026-11-05T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Jacksonville Jaguars vs Baltimore Ravens on Thu Nov 05, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Jacksonville Jaguars vs Baltimore Ravens. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Jacksonville%20Jaguars%20vs%20Baltimore%20Ravens%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873037",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261105"
+   "espn_id": "401873037"
   },
   {
    "id": "veterans-day-2026-city",
@@ -912,13 +848,12 @@
    "start": "2026-11-06T18:00",
    "end": "20:00",
    "location": "C. Robert Lee Activity Center, 21815 Pioneer Blvd, Hawaiian Gardens, CA 90716",
-   "description": "City of Hawaiian Gardens Veterans Day Celebration on Fri Nov 6, 2026 at 6:00 PM to 8:00 PM PT (America/Los_Angeles), at the C. Robert Lee Activity Center (same 21815 Pioneer Blvd campus as City Hall). Live music, guest speakers, finger foods, and a special giveaway for all veterans. Hosted by the City of Hawaiian Gardens. Details verified Oct 17, 2026 from the City of Hawaiian Gardens email from Eric Leon (eleon@hgcity.org, Oct 6, 2026) with the official 2026 Veterans Day flyer, and from hgcity.org. Post flyer: img/flyers/vfw-post7243-veterans-day-2026-11-06.png (PDF: img/flyers/vfw-post7243-veterans-day-2026-11-06.pdf). Official city flyer kept as cityFlyer: img/flyers/veterans-day-2026.png (PDF: img/flyers/veterans-day-2026.pdf). VFW Post 7243 will be there; hosted by the City of Hawaiian Gardens.",
+   "description": "Live music, guest speakers, finger foods, and a special giveaway for all veterans. Hosted by the City of Hawaiian Gardens. VFW Post 7243 will be there.",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Veterans%20Day%20Celebration",
    "rsvpEnabled": false,
    "test": false,
    "flyer": "img/flyers/vfw-post7243-veterans-day-2026-11-06.png",
    "flyerPdf": "img/flyers/vfw-post7243-veterans-day-2026-11-06.pdf",
-   "source": "https://www.hgcity.org/government/departments/recreation-and-community-services/activities-events/special-events-calendar",
    "cityFlyer": "img/flyers/veterans-day-2026.png",
    "cityFlyerPdf": "img/flyers/veterans-day-2026.pdf"
   },
@@ -928,13 +863,12 @@
    "category": "NBA",
    "start": "2026-11-06T19:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Portland Trail Blazers vs Los Angeles Lakers on Fri Nov 06, 2026 at 7:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Portland Trail Blazers vs Los Angeles Lakers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Portland%20Trail%20Blazers%20vs%20Los%20Angeles%20Lakers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909294",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909294"
   },
   {
    "id": "nfl-401873038",
@@ -942,13 +876,12 @@
    "category": "NFL",
    "start": "2026-11-08T06:30",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Cincinnati Bengals vs Atlanta Falcons on Sun Nov 08, 2026 at 6:30 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Cincinnati Bengals vs Atlanta Falcons. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Cincinnati%20Bengals%20vs%20Atlanta%20Falcons%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873038",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873038"
   },
   {
    "id": "nfl-401873040",
@@ -956,13 +889,12 @@
    "category": "NFL",
    "start": "2026-11-08T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Dallas Cowboys vs Indianapolis Colts on Sun Nov 08, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Dallas Cowboys vs Indianapolis Colts. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Dallas%20Cowboys%20vs%20Indianapolis%20Colts%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873040",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873040"
   },
   {
    "id": "nfl-401873045",
@@ -970,13 +902,12 @@
    "category": "NFL",
    "start": "2026-11-08T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. New York Jets vs Kansas City Chiefs on Sun Nov 08, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: New York Jets vs Kansas City Chiefs. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20New%20York%20Jets%20vs%20Kansas%20City%20Chiefs%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873045",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873045"
   },
   {
    "id": "nfl-401873042",
@@ -984,13 +915,12 @@
    "category": "NFL",
    "start": "2026-11-08T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Detroit Lions vs Miami Dolphins on Sun Nov 08, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Detroit Lions vs Miami Dolphins. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Detroit%20Lions%20vs%20Miami%20Dolphins%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873042",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873042"
   },
   {
    "id": "nfl-401873039",
@@ -998,13 +928,12 @@
    "category": "NFL",
    "start": "2026-11-08T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Cleveland Browns vs New Orleans Saints on Sun Nov 08, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Cleveland Browns vs New Orleans Saints. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Cleveland%20Browns%20vs%20New%20Orleans%20Saints%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873039",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873039"
   },
   {
    "id": "nfl-401873044",
@@ -1012,13 +941,12 @@
    "category": "NFL",
    "start": "2026-11-08T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. New York Giants vs Philadelphia Eagles on Sun Nov 08, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: New York Giants vs Philadelphia Eagles. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20New%20York%20Giants%20vs%20Philadelphia%20Eagles%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873044",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873044"
   },
   {
    "id": "nfl-401873043",
@@ -1026,13 +954,12 @@
    "category": "NFL",
    "start": "2026-11-08T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Los Angeles Rams vs Washington Commanders on Sun Nov 08, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Los Angeles Rams vs Washington Commanders. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Rams%20vs%20Washington%20Commanders%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873043",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873043"
   },
   {
    "id": "nfl-401873041",
@@ -1040,13 +967,12 @@
    "category": "NFL",
    "start": "2026-11-08T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Denver Broncos vs Carolina Panthers on Sun Nov 08, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Denver Broncos vs Carolina Panthers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Denver%20Broncos%20vs%20Carolina%20Panthers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873041",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873041"
   },
   {
    "id": "nfl-401873046",
@@ -1054,13 +980,12 @@
    "category": "NFL",
    "start": "2026-11-08T13:05",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Houston Texans vs Los Angeles Chargers on Sun Nov 08, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Houston Texans vs Los Angeles Chargers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Houston%20Texans%20vs%20Los%20Angeles%20Chargers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873046",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873046"
   },
   {
    "id": "nfl-401873047",
@@ -1068,13 +993,12 @@
    "category": "NFL",
    "start": "2026-11-08T13:05",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Las Vegas Raiders vs San Francisco 49ers on Sun Nov 08, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Las Vegas Raiders vs San Francisco 49ers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Las%20Vegas%20Raiders%20vs%20San%20Francisco%2049ers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873047",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873047"
   },
   {
    "id": "nfl-401873049",
@@ -1082,13 +1006,12 @@
    "category": "NFL",
    "start": "2026-11-08T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Green Bay Packers vs New England Patriots on Sun Nov 08, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Green Bay Packers vs New England Patriots. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Green%20Bay%20Packers%20vs%20New%20England%20Patriots%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873049",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873049"
   },
   {
    "id": "nfl-401873048",
@@ -1096,13 +1019,12 @@
    "category": "NFL",
    "start": "2026-11-08T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Arizona Cardinals vs Seattle Seahawks on Sun Nov 08, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Arizona Cardinals vs Seattle Seahawks. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Arizona%20Cardinals%20vs%20Seattle%20Seahawks%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873048",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873048"
   },
   {
    "id": "nba-401909946",
@@ -1110,13 +1032,12 @@
    "category": "NBA",
    "start": "2026-11-08T15:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Los Angeles Lakers vs Detroit Pistons on Sun Nov 08, 2026 at 3:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Los Angeles Lakers vs Detroit Pistons. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Lakers%20vs%20Detroit%20Pistons%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909946",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909946"
   },
   {
    "id": "nfl-401873050",
@@ -1124,13 +1045,12 @@
    "category": "NFL",
    "start": "2026-11-08T17:20",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Tampa Bay Buccaneers vs Chicago Bears on Sun Nov 08, 2026 at 5:20 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Tampa Bay Buccaneers vs Chicago Bears. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Tampa%20Bay%20Buccaneers%20vs%20Chicago%20Bears%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873050",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261108"
+   "espn_id": "401873050"
   },
   {
    "id": "nba-401909952",
@@ -1138,13 +1058,12 @@
    "category": "NBA",
    "start": "2026-11-09T16:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Los Angeles Lakers vs Atlanta Hawks on Mon Nov 09, 2026 at 4:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Los Angeles Lakers vs Atlanta Hawks. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Lakers%20vs%20Atlanta%20Hawks%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909952",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909952"
   },
   {
    "id": "nfl-401873051",
@@ -1152,13 +1071,12 @@
    "category": "NFL",
    "start": "2026-11-09T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Buffalo Bills vs Minnesota Vikings on Mon Nov 09, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Buffalo Bills vs Minnesota Vikings. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Buffalo%20Bills%20vs%20Minnesota%20Vikings%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873051",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261109"
+   "espn_id": "401873051"
   },
   {
    "id": "nba-401909971",
@@ -1166,13 +1084,12 @@
    "category": "NBA",
    "start": "2026-11-11T17:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Los Angeles Lakers vs Milwaukee Bucks on Wed Nov 11, 2026 at 5:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Los Angeles Lakers vs Milwaukee Bucks. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Lakers%20vs%20Milwaukee%20Bucks%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909971",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909971"
   },
   {
    "id": "nfl-401873052",
@@ -1180,13 +1097,12 @@
    "category": "NFL",
    "start": "2026-11-12T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Washington Commanders vs New York Giants on Thu Nov 12, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Washington Commanders vs New York Giants. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Washington%20Commanders%20vs%20New%20York%20Giants%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873052",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261112"
+   "espn_id": "401873052"
   },
   {
    "id": "nfl-401873053",
@@ -1194,13 +1110,12 @@
    "category": "NFL",
    "start": "2026-11-15T06:30",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. New England Patriots vs Detroit Lions on Sun Nov 15, 2026 at 6:30 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: New England Patriots vs Detroit Lions. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20New%20England%20Patriots%20vs%20Detroit%20Lions%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873053",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873053"
   },
   {
    "id": "nfl-401873058",
@@ -1208,13 +1123,12 @@
    "category": "NFL",
    "start": "2026-11-15T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Kansas City Chiefs vs Atlanta Falcons on Sun Nov 15, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Kansas City Chiefs vs Atlanta Falcons. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Kansas%20City%20Chiefs%20vs%20Atlanta%20Falcons%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873058",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873058"
   },
   {
    "id": "nfl-401873056",
@@ -1222,13 +1136,12 @@
    "category": "NFL",
    "start": "2026-11-15T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Houston Texans vs Cleveland Browns on Sun Nov 15, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Houston Texans vs Cleveland Browns. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Houston%20Texans%20vs%20Cleveland%20Browns%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873056",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873056"
   },
   {
    "id": "nfl-401873060",
@@ -1236,13 +1149,12 @@
    "category": "NFL",
    "start": "2026-11-15T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Minnesota Vikings vs Green Bay Packers on Sun Nov 15, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Minnesota Vikings vs Green Bay Packers. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Minnesota%20Vikings%20vs%20Green%20Bay%20Packers%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873060",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873060"
   },
   {
    "id": "nfl-401873057",
@@ -1250,13 +1162,12 @@
    "category": "NFL",
    "start": "2026-11-15T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Jacksonville Jaguars vs Tennessee Titans on Sun Nov 15, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Jacksonville Jaguars vs Tennessee Titans. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Jacksonville%20Jaguars%20vs%20Tennessee%20Titans%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873057",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873057"
   },
   {
    "id": "nfl-401873059",
@@ -1264,13 +1175,12 @@
    "category": "NFL",
    "start": "2026-11-15T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Miami Dolphins vs Indianapolis Colts on Sun Nov 15, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Miami Dolphins vs Indianapolis Colts. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Miami%20Dolphins%20vs%20Indianapolis%20Colts%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873059",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873059"
   },
   {
    "id": "nfl-401873055",
@@ -1278,13 +1188,12 @@
    "category": "NFL",
    "start": "2026-11-15T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Carolina Panthers vs New Orleans Saints on Sun Nov 15, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Carolina Panthers vs New Orleans Saints. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Carolina%20Panthers%20vs%20New%20Orleans%20Saints%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873055",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873055"
   },
   {
    "id": "nfl-401873054",
@@ -1292,13 +1201,12 @@
    "category": "NFL",
    "start": "2026-11-15T10:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Buffalo Bills vs New York Jets on Sun Nov 15, 2026 at 10:00 AM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Buffalo Bills vs New York Jets. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Buffalo%20Bills%20vs%20New%20York%20Jets%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873054",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873054"
   },
   {
    "id": "nba-401909986",
@@ -1306,13 +1214,12 @@
    "category": "NBA",
    "start": "2026-11-15T13:00",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NBA game. Los Angeles Lakers vs Phoenix Suns on Sun Nov 15, 2026 at 1:00 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NBA game: Los Angeles Lakers vs Phoenix Suns. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Lakers%20vs%20Phoenix%20Suns%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401909986",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/13/schedule?season=2027"
+   "espn_id": "401909986"
   },
   {
    "id": "nfl-401873062",
@@ -1320,13 +1227,12 @@
    "category": "NFL",
    "start": "2026-11-15T13:05",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Seattle Seahawks vs Las Vegas Raiders on Sun Nov 15, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Seattle Seahawks vs Las Vegas Raiders. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Seattle%20Seahawks%20vs%20Las%20Vegas%20Raiders%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873062",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873062"
   },
   {
    "id": "nfl-401873061",
@@ -1334,13 +1240,12 @@
    "category": "NFL",
    "start": "2026-11-15T13:05",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Los Angeles Rams vs Arizona Cardinals on Sun Nov 15, 2026 at 1:05 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Los Angeles Rams vs Arizona Cardinals. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Rams%20vs%20Arizona%20Cardinals%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873061",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873061"
   },
   {
    "id": "nfl-401873063",
@@ -1348,13 +1253,12 @@
    "category": "NFL",
    "start": "2026-11-15T13:25",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. San Francisco 49ers vs Dallas Cowboys on Sun Nov 15, 2026 at 1:25 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: San Francisco 49ers vs Dallas Cowboys. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20San%20Francisco%2049ers%20vs%20Dallas%20Cowboys%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873063",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873063"
   },
   {
    "id": "nfl-401873064",
@@ -1362,13 +1266,12 @@
    "category": "NFL",
    "start": "2026-11-15T17:20",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Pittsburgh Steelers vs Cincinnati Bengals on Sun Nov 15, 2026 at 5:20 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Pittsburgh Steelers vs Cincinnati Bengals. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Pittsburgh%20Steelers%20vs%20Cincinnati%20Bengals%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873064",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261115"
+   "espn_id": "401873064"
   },
   {
    "id": "nfl-401873065",
@@ -1376,13 +1279,12 @@
    "category": "NFL",
    "start": "2026-11-16T17:15",
    "location": "VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA 90716",
-   "description": "NFL game. Los Angeles Chargers vs Baltimore Ravens on Mon Nov 16, 2026 at 5:15 PM PT (America/Los_Angeles). Watch at the Post. Come down to VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Start time verified from ESPN schedule.",
+   "description": "NFL game: Los Angeles Chargers vs Baltimore Ravens. Watch at the Post.",
    "price": "Free entry",
    "rsvp": "mailto:VFW7243@yahoo.com?subject=RSVP%20Los%20Angeles%20Chargers%20vs%20Baltimore%20Ravens%20-%20Watch%20at%20the%20Post",
    "rsvpEnabled": false,
    "test": false,
-   "espn_id": "401873065",
-   "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261116"
+   "espn_id": "401873065"
   }
  ],
  "past": [
@@ -1421,7 +1323,7 @@
   {
    "eventId": "jordan-working-post-2026-10-18",
    "remindDaysBefore": 1,
-   "text": "Jordan working the Post tomorrow: {date} at The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Hours: time TBD — details coming soon."
+   "text": "Jordan working the Post tomorrow: {date} at The Hall, VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens. Hours to be announced."
   },
   {
    "eventId": "nfl-401873004",

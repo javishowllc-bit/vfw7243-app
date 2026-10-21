@@ -8,7 +8,7 @@ const fmt=d=>new Date(d).toLocaleString('en-US',{weekday:'short',month:'short',d
 const t12=t=>{if(!t)return'';let[h,m]=t.split(':');h=+h;return(h%12||12)+':'+m+(h<12?' AM':' PM')};
 async function load(){let d;const loc=localStorage.getItem('draftEvents');
  try{d=await (await fetch('events.json')).json()}catch(e){d={events:[],past:[]}}
- $('#note').textContent=d.note||'';
+ /* internal note hidden from users */
  const q=new URLSearchParams(location.search).get('today');const now=q?new Date(q+'T09:00'):new Date();
  d.events=expand(d.events,now);
  const ev=d.events.sort((a,b)=>(a.start||'9').localeCompare(b.start||'9'));_events=ev;_now=now;buildMemberReminders();
@@ -16,14 +16,11 @@ async function load(){let d;const loc=localStorage.getItem('draftEvents');
  $('#evlist').innerHTML=ev.map(e=>`<div class="card${e.test?' test':''}" id="ev-${esc(e.id)}">${e.flyer?`<img class="f" src="${esc(e.flyer)}" alt="Flyer">`:''}<div class="b">
  ${e.qr?`<img class="qr" src="${esc(e.qr)}" alt="QR code">`:''}<span class="tag">${esc(e.category)}</span><h3>${esc(e.title)}</h3>
  <div><b>When:</b> ${when(e)}</div>${e.location?`<div><b>Where:</b> ${esc(e.location)}</div>`:''}${e.doors?`<div><b>Doors:</b> ${t12(e.doors)}</div>`:''}${e.price?`<div><b>Price:</b> ${esc(e.price)}</div>`:''}<p class="small">${esc(e.description)}</p>
- ${e.flyerPdf?`<p class="small"><a href="${esc(e.flyerPdf)}" target="_blank" rel="noopener">Flyer PDF</a></p>`:''}${e.cityFlyerPdf?`<p class="small"><a href="${esc(e.cityFlyerPdf)}" target="_blank" rel="noopener">Official City of Hawaiian Gardens flyer (PDF)</a>${e.cityFlyer?` &middot; <a href="${esc(e.cityFlyer)}" target="_blank" rel="noopener">City flyer image</a>`:''}</p>`:''}${(e.recurring||e.category=='Meeting'||e.zoomUrl)?zoomHTML(e,now):''}${rsvpHTML(e)}</div></div>`).join('')||'<p>No events posted yet.</p>';
+ ${e.flyerPdf?`<p class="small"><a href="${esc(e.flyerPdf)}" rel="noopener">Flyer PDF</a></p>`:''}${e.cityFlyerPdf?`<p class="small"><a href="${esc(e.cityFlyerPdf)}" rel="noopener">Official City of Hawaiian Gardens flyer (PDF)</a>${e.cityFlyer?` &middot; <a href="${esc(e.cityFlyer)}" rel="noopener">City flyer image</a>`:''}</p>`:''}${(e.recurring||e.category=='Meeting'||e.zoomUrl)?zoomHTML(e,now):''}${rsvpHTML(e)}</div></div>`).join('')||'<p>No events posted yet.</p>';
 /* Reminder banner timing: if a reminder has notifyAt (exact ISO instant), the banner shows only at/after that time until event start; otherwise remindDaysBefore days before. notifyAtLocal/timezone document the wall-clock intent (America/Los_Angeles). */
 const _rtexts=[];(d.reminders||[]).forEach(r=>{const pd=x=>new Date(x.length==10?x+'T00:00':x);const e=ev.filter(x=>x.id==r.eventId||x.id.startsWith(r.eventId+'-')).find(x=>pd(x.start)>now);if(!e||!e.start)return;const t=pd(e.start);const gate=r.notifyAt?new Date(r.notifyAt):new Date(t-r.remindDaysBefore*864e5);if(now>=gate&&now<t){_rtexts.push(r.text.replace('{date}',new Date(e.start.length==10?e.start+'T12:00':e.start).toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'})))}});if(_rtexts.length){const _rel=$('#remind');_rel.hidden=false;_rel.innerHTML=_rtexts.map(t=>`<div>${esc(t)}</div>`).join('')}
- const months=[0,1].map(i=>{const x=new Date(now.getFullYear(),now.getMonth()+i,1);return[x.getFullYear(),x.getMonth()]});
- $('#evgrid').innerHTML=months.map(([y,m])=>{const first=new Date(y,m,1).getDay(),n=new Date(y,m+1,0).getDate();let c='SMTWTFS'.split('').map(x=>`<div class="h">${x}</div>`).join('')+'<div></div>'.repeat(first);
-  for(let i=1;i<=n;i++){const k=`${y}-${String(m+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;const e=ev.find(x=>x.start&&x.start.startsWith(k));const rr=(d.rentals||[]).find(x=>x.date==k);const cls=(e?'e':'')+(e&&!e.test?' real':'')+(rr?' r':'');const lab=rr?'<small>Rented</small>':'';c+=e?`<div class="${cls}" onclick="document.querySelector('.seg button').click();document.getElementById('ev-${e.id}').scrollIntoView()">${i}${lab}</div>`:`<div class="${cls}">${i}${lab}</div>`}
-  return`<div class="mon"><h3>${new Date(y,m,1).toLocaleString('en-US',{month:'long',year:'numeric'})}</h3><div class="g">${c}</div></div>`}).join('')+'<p class="small legend"><span class="lg e"></span> Event &nbsp; <span class="lg r"></span> Hall Rented (private)</p>';
- $('#rentals').innerHTML=(d.rentals||[]).map(r=>`<div class="rent"><b>Hall Rented${r.test?' (TEST)':''}</b><br>${new Date(r.date+'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}, ${t12(r.start)} to ${t12(r.end)}<br><span class="small">${esc(r.type)}, private event</span></div>`).join('');
+ _rentals=d.rentals||[];_calY=now.getFullYear();_calM=now.getMonth();renderMonth();
+ $('#rentals').innerHTML=(d.rentals||[]).map(r=>`<div class="rent"><b>Hall Rented</b><br>${new Date(r.date+'T12:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}, ${t12(r.start)} to ${t12(r.end)}<br><span class="small">${esc(r.type)}, private event</span></div>`).join('');
  prefillContactForms();
  _whenFn=when;_eventsLoaded=true;maybeShowFirstEventPopup();
  $('#past').innerHTML=(d.past||[]).map(p=>`<div class="past">${p.flyer?`<img src="${esc(p.flyer)}" alt="">`:''}<div><b>${esc(p.title)}</b><br><span class="small">${new Date(p.date+'T12:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}</span></div></div>`).join('');
@@ -67,8 +64,8 @@ const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${Str
 function expand(list,now){const out=[];list.forEach(e=>{if(e.recurring!='firstSaturday'){out.push(e);return}nextFirstSats(now,3,e.time).forEach((d,i)=>out.push({...e,id:e.id+'-'+iso(d).slice(0,10),start:iso(d),flyer:'',title:e.title+(i?'':' (Next)')}))});return out}
 const TZ='America/Los_Angeles';let _events=[],_now=new Date();
 const laDay=d=>new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d instanceof Date?d:new Date(d));
-function zoomHTML(e,now){const day=e.start?String(e.start).slice(0,10):'';const isDay=!!day&&day===laDay(now||new Date());const txt='Join on Zoom \u2014 Click here';
- if(isDay)return e.zoomUrl?`<a class="big zoom" href="${esc(e.zoomUrl)}" target="_blank" rel="noopener">${txt}</a>${e.zoomMeetingId?`<p class="small zoomday">Meeting ID: ${esc(e.zoomMeetingId)}${e.zoomPasscode?' &middot; Passcode: '+esc(e.zoomPasscode):''}</p>`:''}`:`<button class="big zoom" disabled>${txt}: Zoom link coming soon</button>`;
+function zoomHTML(e,now){const day=e.start?String(e.start).slice(0,10):'';const isDay=!!day&&day===laDay(now||new Date());const txt='Join on Zoom: Click here';
+ if(isDay)return e.zoomUrl?`<a class="big zoom" href="${esc(e.zoomUrl)}" rel="noopener">${txt}</a>${e.zoomMeetingId?`<p class="small zoomday">Meeting ID: ${esc(e.zoomMeetingId)}${e.zoomPasscode?' &middot; Passcode: '+esc(e.zoomPasscode):''}</p>`:''}`:`<button class="big zoom" disabled>${txt}: Zoom link coming soon</button>`;
  return `<p class="small zoomday">On Zoom: the &ldquo;${txt}&rdquo; button appears here on meeting day${day?' ('+day+')':''}.${e.zoomUrl?'':' Zoom link coming soon.'}</p>`}
 function rsvpHTML(e){/* RSVP is per-event opt-in only (Javier, Oct 17 2026): render ONLY when rsvpEnabled===true AND an rsvp link exists. Off by default; mainly for ticketed events the Post explicitly flags. The rsvp mailto subject already names the event/title, and any existing price field still renders above. */if(!e||e.rsvpEnabled!==true||!e.rsvp)return'';return `<a class="big" href="${esc(e.rsvp)}" aria-label="RSVP for ${esc(e.title)}">RSVP</a>`}
 function getSignup(){try{return JSON.parse(localStorage.getItem('reminderSignup')||'null')}catch(x){return null}}
@@ -116,3 +113,32 @@ function maybeShowFirstEventPopup(){
   if(_firstPopupTimer)clearTimeout(_firstPopupTimer);
   _firstPopupTimer=setTimeout(()=>{closeFirstEventPopup()},4000); // auto-dismiss after exactly 4 seconds
 }
+
+/* Month calendar (v19): icon + short headline per day, today highlighted, prev/next, tap a day for a sheet. */
+let _calY=0,_calM=0,_rentals=[];
+const dayKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const LA_TEAMS=['Lakers','Rams','Chargers','Clippers','Dodgers','Angels'];
+const nick=n=>n.trim().split(' ').pop();
+function teamsOf(e){const t=String(e.title).replace(/ - Watch at the Post$/,'').replace(/^World Series Game \d+: /,'');return t.split(' vs ')}
+function kindOf(e){const id=String(e.id);if(id.startsWith('membership'))return'meet';if(id.startsWith('veterans-day'))return'vet';if(/^(nfl|nba|mlb)-/.test(id))return id.slice(0,3);return'post'}
+function badge(e){const k=kindOf(e);if(k=='meet')return'<img class="ico" src="img/icon-192.png" alt="">';if(k=='vet')return'<span class="ico star" aria-hidden="true">&#9733;</span>';if(k=='post')return'<span class="ico post" aria-hidden="true">&#9873;</span>';
+ if(/^World Series/.test(e.title))return'<span class="ico tb mlb" aria-hidden="true">WS</span>';const tm=teamsOf(e);const la=tm.find(x=>LA_TEAMS.includes(nick(x)));const n=nick(la||tm[tm.length-1]||'');return`<span class="ico tb ${k}" aria-hidden="true">${esc(n.slice(0,3).toUpperCase())}</span>`}
+function headline(list){const pri=['meet','vet','post'];for(const p of pri){const e=list.find(x=>kindOf(x)==p);if(e)return[e,p=='meet'?'Meeting':p=='vet'?'Veterans Day':String(e.title).split(' ')[0]]}
+ const sp=list.filter(x=>/^(nfl|nba|mlb)$/.test(kindOf(x)));const la=sp.find(x=>teamsOf(x).some(t=>LA_TEAMS.includes(nick(t))));const e=la||sp[0];
+ let h=(!la&&/^World Series/.test(e.title))?'World Series':la?nick(teamsOf(la).find(t=>LA_TEAMS.includes(nick(t)))):(sp.length==1?nick(teamsOf(e)[0]):sp.length+' games');if(la&&sp.length>1)h+=' +'+(sp.length-1);return[e,h]}
+function evOn(k){return _events.filter(x=>x.start&&x.start.slice(0,10)==k)}
+function timeTxt(e){return e.start.length==10?'All day':new Date(e.start).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})+(e.end?' to '+t12(e.end):'')}
+function renderMonth(){const y=_calY,m=_calM,first=new Date(y,m,1).getDay(),n=new Date(y,m+1,0).getDate(),tk=dayKey(_now);
+ let c='SMTWTFS'.split('').map(x=>`<div class="h">${x}</div>`).join('')+'<div class="x"></div>'.repeat(first);
+ for(let i=1;i<=n;i++){const k=`${y}-${String(m+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;const l=evOn(k);const rr=_rentals.find(x=>x.date==k);
+  let inner=`<span class="dn">${i}</span>`;if(l.length){const[e,h]=headline(l);inner+=badge(e)+`<span class="hl">${esc(h)}</span>`}else if(rr)inner+='<span class="hl">Rented</span>';
+  const cls='d'+(l.length?' has':'')+(rr?' r':'')+(k==tk?' today':'');
+  c+=l.length?`<button type="button" class="${cls}" data-k="${k}" aria-label="${new Date(k+'T12:00').toLocaleDateString('en-US',{month:'long',day:'numeric'})}, ${l.length} event${l.length>1?'s':''}">${inner}</button>`:`<div class="${cls}">${inner}</div>`}
+ const tl=evOn(tk);const today=tl.length?`<div class="todaybar" data-k="${tk}"><b>Today, ${_now.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}:</b> ${tl.map(e=>esc(String(e.title).replace(/ - Watch at the Post$/,''))+' ('+esc(timeTxt(e))+')').join('; ')}</div>`:`<div class="todaybar"><b>Today, ${_now.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}:</b> no events posted</div>`;
+ $('#evgrid').innerHTML=today+`<div class="mon"><div class="mnav"><button type="button" id="calPrev" aria-label="Previous month">&#8249;</button><h3>${new Date(y,m,1).toLocaleString('en-US',{month:'long',year:'numeric'})}</h3><button type="button" id="calNext" aria-label="Next month">&#8250;</button></div><div class="g">${c}</div></div><p class="small legend">Tap a highlighted day to see what is happening.</p>`;
+ $('#calPrev').onclick=()=>{_calM--;if(_calM<0){_calM=11;_calY--}renderMonth()};$('#calNext').onclick=()=>{_calM++;if(_calM>11){_calM=0;_calY++}renderMonth()};
+ document.querySelectorAll('#evgrid [data-k]').forEach(b=>b.onclick=()=>openDay(b.dataset.k))}
+function openDay(k){const l=evOn(k);if(!l.length)return;const dl=$('#daySheet');
+ $('#daySheetBody').innerHTML=`<h3 class="sheet-date">${new Date(k+'T12:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}</h3>`+l.map(e=>`<div class="sheet-ev">${e.flyer?`<img src="${esc(e.flyer)}" alt="Flyer for ${esc(e.title)}">`:''}<h4>${esc(String(e.title).replace(/ - Watch at the Post$/,''))}</h4><p><b>${esc(timeTxt(e))}</b></p>${e.location?`<p>${esc(e.location)}</p>`:''}${e.flyer?'':`<p class="small">${esc(e.description)}</p>`}</div>`).join('');
+ try{dl.showModal()}catch(x){dl.setAttribute('open','')}}
+document.addEventListener('click',ev=>{if(ev.target&&ev.target.id=='daySheetClose')$('#daySheet').close()});

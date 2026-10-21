@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VFW Post 7243 Event Calendar</title>
+<meta name="description" content="VFW Post 7243 event calendar, Hawaiian Gardens. Sign up for event notifications and add events to your calendar.">
+<meta property="og:title" content="VFW Post 7243 Event Calendar">
+<meta property="og:description" content="Sign up for event notifications and add Post events to your calendar.">
+<meta property="og:image" content="https://javishowllc-bit.github.io/vfw7243-app/img/og-app-1200x630.png">
+<meta name="theme-color" content="#0b2a5b">
+<link rel="icon" href="emblem.png">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f3f5f9;color:#111}
+header{background:#0b2a5b;color:#fff;padding:14px 16px;display:flex;gap:12px;align-items:center}
+header img{width:52px;height:52px}header h1{font-size:20px;margin:0}header p{margin:2px 0 0;font-size:13px;opacity:.9}
+main{padding:14px;max-width:560px;margin:auto}
+.card{background:#fff;border-radius:14px;padding:16px;margin-bottom:14px;box-shadow:0 1px 4px #0002}
+h2{font-size:18px;margin:0 0 8px;color:#0b2a5b}
+label{display:block;font-weight:600;margin:10px 0 4px;font-size:15px}
+input[type=tel],input[type=email]{width:100%;font-size:17px;padding:12px;border:1px solid #9aa;border-radius:10px}
+.row{display:flex;gap:16px;margin-top:6px}.row label{font-weight:400;margin:0}
+.big{display:block;width:100%;text-align:center;font-size:17px;font-weight:700;padding:14px;border:0;border-radius:12px;background:#c8102e;color:#fff;text-decoration:none;margin-top:12px;cursor:pointer}
+.alt{background:#0b2a5b}.ghost{background:#e8edf6;color:#0b2a5b}
+.small{font-size:13px;color:#444}.err{color:#c8102e;font-weight:600}
+.ok{background:#e7f6ea;border:1px solid #6b6;padding:10px;border-radius:10px}
+.mhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.mhead button{width:44px;height:44px;font-size:22px;border:0;border-radius:10px;background:#e8edf6;color:#0b2a5b}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.dow{font-size:11px;text-align:center;color:#555;font-weight:700}
+.day{min-height:46px;border-radius:8px;background:#f3f5f9;font-size:12px;padding:3px;border:0;text-align:left;color:#111}
+.day.has{background:#dfe7f5;font-weight:700}.day.vet{background:#c8102e;color:#fff}.day.meet{background:#0b2a5b;color:#fff}
+.day.today{outline:2px solid #c8102e}.day .dot{display:block;font-size:10px;font-weight:600;line-height:1.1;margin-top:2px;overflow:hidden}
+.ev{border-top:1px solid #dde;padding:10px 0}.ev b{display:block}.ev .when{font-size:14px;color:#333}
+.ev .acts{display:flex;gap:8px;margin-top:8px}.ev .acts a{flex:1;font-size:14px;padding:10px;margin:0}
+.feat{border:2px solid #c8102e;border-radius:12px;padding:12px;margin-bottom:10px}
+dialog{border:0;border-radius:16px;padding:0;width:min(94vw,540px);max-height:88vh}
+dialog::backdrop{background:#0008}.dlg{padding:14px;overflow:auto;max-height:88vh}
+.x{float:right;width:40px;height:40px;border:0;border-radius:20px;background:#e8edf6;font-size:20px}
+</style></head><body>
+<header><img src="emblem.png" alt="VFW emblem"><div><h1>VFW Post 7243 Event Calendar</h1><p>12064 Centralia Rd, Hawaiian Gardens, CA 90716</p></div></header>
+<main>
+<section class="card" id="signup"><h2>Get event notifications</h2>
+<p class="small">Enter your cell phone and email to get reminders for Post events, including the Veterans Day Celebration on Friday, Nov 6.</p>
+<form id="sf" novalidate>
+<label for="ph">Cell phone</label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+<label for="em">Email</label><input id="em" name="email" type="email" inputmode="email" autocomplete="email" required>
+<label>Are you a VFW member?</label><div class="row"><label><input type="radio" name="mem" value="Yes"> Yes</label><label><input type="radio" name="mem" value="No"> No</label><label><input type="radio" name="mem" value="Not yet"> Want to join</label></div>
+<p id="err" class="err" hidden></p>
+<button class="big" type="submit">Sign me up</button>
+<p class="small">Tapping Sign me up opens your email app with your sign-up addressed to VFW Post 7243 (VFW7243@yahoo.com). Tap Send to finish. By signing up you agree the Post may text and email you event reminders. Msg and data rates may apply.</p>
+</form><div id="done" class="ok" hidden></div></section>
+<section class="card"><h2>Event calendar</h2><button class="big alt" id="openCal" type="button">Open the calendar</button>
+<a class="big ghost" href="webcal://javishowllc-bit.github.io/vfw7243-app/calendar.ics">Add all Post events to my calendar</a>
+<a class="big ghost" href="../calendar.ics" download="VFW7243-calendar.ics">Download calendar file (.ics)</a>
+<div id="list"></div></section>
+<section class="card"><h2>Join VFW Post 7243</h2><a class="big" href="../join/">Become a member</a><a class="big ghost" href="../">Open the Post app</a></section>
+</main>
+<dialog id="cal"><div class="dlg"><button class="x" id="closeCal" aria-label="Close">&times;</button><h2 id="calTitle">VFW Post 7243 Calendar</h2>
+<div class="mhead"><button id="prev" aria-label="Previous month">&lsaquo;</button><b id="mname"></b><button id="next" aria-label="Next month">&rsaquo;</button></div>
+<div class="grid" id="grid"></div><div id="dayList"></div>
+<h2 style="margin-top:12px">Featured</h2><div id="featured"></div>
+<button class="big" id="goSign" type="button">Sign up for notifications</button></div></dialog>
+<script src="cal.js"></script></body></html>

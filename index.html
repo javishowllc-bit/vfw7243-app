@@ -3,13 +3,17 @@
 <title>VFW Post 7243</title><meta name="theme-color" content="#1B2A4A">
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon.png"><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="img/icon-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="VFW 7243">
+<meta name="description" content="VFW Post 7243, Hawaiian Gardens, CA. Events, Membership Meeting reminders and hall rental.">
+<meta property="og:type" content="website"><meta property="og:title" content="VFW Post 7243 Hawaiian Gardens"><meta property="og:description" content="Events, Membership Meeting reminders and hall rental for VFW Post 7243, 12064 Centralia Rd, Hawaiian Gardens, CA."><meta property="og:url" content="https://javishowllc-bit.github.io/vfw7243-app/"><meta property="og:image" content="https://javishowllc-bit.github.io/vfw7243-app/img/og-app-1200x630.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="VFW Post 7243 Hawaiian Gardens"><meta name="twitter:image" content="https://javishowllc-bit.github.io/vfw7243-app/img/og-app-1200x630.png">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="style.css"></head><body>
 <header><img src="img/emblem.png" alt="VFW emblem"><div class="num">7243</div><div class="sub">Hawaiian Gardens, CA</div><button id="donateBtn" class="donate">Donate</button></header>
 <main>
 <section id="events" class="tab">
  <div id="remind" class="remind" hidden></div>
  <div class="seg"><button data-v="list">List</button><button data-v="grid" class="on">Month</button></div>
- <p id="note" class="note"></p><div id="evlist" hidden></div><div id="evgrid"></div>
+ <div id="evlist" hidden></div><div id="evgrid"></div>
  <h2>Hall Rentals (Booked)</h2><p class="note">Private events: only type and time shown.</p><div id="rentals"></div>
  <h2>Recent at the Post</h2><div id="past"></div>
 </section>
@@ -30,10 +34,14 @@
 </section>
 <section id="contact" class="tab" hidden>
  <h2>Contact the Post</h2>
- <a class="big" href="https://www.openstreetmap.org/search?query=12064%20Centralia%20Rd%2C%20Hawaiian%20Gardens%2C%20CA%2090716" target="_blank" rel="noopener">12064 Centralia Rd<br>Hawaiian Gardens, CA 90716<br><small>Open map</small></a>
+ <a class="big" href="https://www.openstreetmap.org/search?query=12064%20Centralia%20Rd%2C%20Hawaiian%20Gardens%2C%20CA%2090716" rel="noopener">12064 Centralia Rd<br>Hawaiian Gardens, CA 90716<br><small>Open map</small></a>
  <a class="big" href="mailto:VFW7243@yahoo.com">Email VFW7243@yahoo.com</a>
- <a class="big" href="https://www.facebook.com/vfwpost.hawaiiangardens/" target="_blank" rel="noopener">Facebook</a>
- <a class="big" href="https://www.instagram.com/vfw7243hawaiiangardens" target="_blank" rel="noopener">Instagram</a>
+ <a class="big" href="https://www.facebook.com/vfwpost.hawaiiangardens/" rel="noopener">Facebook</a>
+ <a class="big" href="https://www.instagram.com/vfw7243hawaiiangardens" rel="noopener">Instagram</a>
+ <h2>City of Hawaiian Gardens</h2>
+ <a class="big" href="https://fs20.formsite.com/hawaiiangardens/avtwfzjxjr/index" rel="noopener">Join the City Military Veterans Information List<br><small>City of Hawaiian Gardens sign-up form</small></a>
+ <a class="big alt" href="mailto:eleon@hgcity.org">Eric Leon, Special Events Coordinator<br><small>eleon@hgcity.org</small></a>
+ <a class="big alt" href="tel:+15624202641,341">Call 562-420-2641 ext. 341</a>
  <h2>Business Hours of Operation</h2><div class="soon">Hours coming soon.</div>
  <a class="big alt" href="install.html">Add this app to your phone</a>
  <button class="big" id="pushBtn">Turn on meeting reminders</button>
@@ -42,6 +50,7 @@
  <p class="small">Event reminder settings asks your mobile number and &ldquo;Are you a member?&rdquo; Members get automatic reminders 2 weeks before and 1 day before an event. Text delivery starts once the Post connects a texting service; until then your choice is saved only on this phone.</p>
 </section>
 </main>
+<dialog id="daySheet" aria-label="Events for this day"><div id="daySheetBody"></div><button type="button" class="big" id="daySheetClose">Close</button></dialog>
 <nav><button data-t="events" class="on">Events</button><button data-t="hall">Hall Rental</button><button data-t="contact">Contact</button></nav>
 <dialog id="phone"><form method="dialog" id="pf">
  <h3>Get event reminders?</h3>
